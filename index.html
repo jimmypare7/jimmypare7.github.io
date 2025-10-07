@@ -64,35 +64,37 @@
   <main class="pt-28 max-w-5xl mx-auto px-6">
 
     <!-- HERO -->
-    <section class="grid md:grid-cols-3 gap-8 items-center">
+    <section class="grid md:grid-cols-2 gap-8 items-center">
       <div class="md:col-span-2">
-        <h1 class="text-4xl md:text-5xl font-serifHead mb-4">Hi! - I’m <span class="font-semibold">Jimmy</span>.</h1>
-        <p class="text-lg text-slate-700 mb-6">I am a student studying mechanical engineering at the University of Vermont. 
+        <h1 class="text-4xl md:text-5xl font-serifHead mb-4">Hi! — I’m <span class="font-semibold">Jimmy</span>.</h1>
+        <p class="text-lg text-slate-700 mb-6">
+          I am a student studying mechanical engineering at the University of Vermont. 
           I use this page to keep track of my school projects, personal projects, and hobbies. 
-          Feel free to send me a message if there are any questions! </p>
+          Feel free to send me a message if there are any questions!
+        </p>
+        <!-- Headshot + Resume Button -->
+        <div class="flex flex-col items-center md:items-start mb-6">
+          <div class="w-44 h-44 md:w-52 md:h-52 rounded-md overflow-hidden border mb-4">
+            <img src="Professional Headshot Cropped.JPG" alt="Headshot" class="object-cover w-full h-full" />
+          </div>
+          <a href="Resume.pdf" target="_blank" class="inline-block px-5 py-2 rounded bg-slate-900 text-white font-semibold hover:bg-slate-700 transition">
+            View Resume (PDF)
+          </a>
+        </div>
         <!-- featured strip -->
         <div class="flex flex-col sm:flex-row gap-3">
           <a href="#" class="flex-1 border rounded-lg p-4 hover:shadow-md transition">
             <div class="text-xs uppercase tracking-wide text-slate-500">Featured</div>
             <div class="font-semibold mt-1">Chaos Cutting Boards</div>
-            <div class="text-sm text-slate-600 mt-1">A series of end grain cuttig boards using maple, walnut, and cherry. </div>
+            <div class="text-sm text-slate-600 mt-1">A series of end grain cutting boards using maple, walnut, and cherry.</div>
           </a>
           <a href="#" class="flex-1 border rounded-lg p-4 hover:shadow-md transition">
             <div class="text-xs uppercase tracking-wide text-slate-500">Featured</div>
-            <div class="font-semibold mt-1">Harmonic Analysis of Vehicle in Python. </div>
+            <div class="font-semibold mt-1">Harmonic Analysis of Vehicle in Python.</div>
             <div class="text-sm text-slate-600 mt-1">I simulated the suspension of a 2D vehicle to determine the natural frequency of the system in python for my System Dynamics course.</div>
           </a>
         </div>
       </div>
-      <!-- headshot + resume button -->
-      <aside class="flex flex-col items-center md:items-end">
-        <div class="w-44 h-44 md:w-52 md:h-52 rounded-md overflow-hidden border mb-4">
-          <img src="Professional Headshot Cropped.JPG" alt="Headshot" class="object-cover w-full h-full" />
-        </div>
-        <a href="Resume - Jimmy Pare.pdf" target="_blank" class="inline-block px-5 py-2 rounded bg-slate-900 text-white font-semibold hover:bg-slate-700 transition">
-          View Resume (PDF)
-        </a>
-      </aside>
     </section>
 
     <!-- SCHOOL PROJECTS -->
@@ -207,6 +209,7 @@
     <!-- Contact -->
     <section id="contact" class="mt-16 mb-24">
       <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
+      <p class="text-slate-600 mb-6">Want to work together? Drop me a line.</p>
       <form class="max-w-xl grid gap-3" action="mailto:you@example.com" method="post" enctype="text/plain">
         <input class="border rounded p-2" type="text" name="name" placeholder="Your name" required>
         <input class="border rounded p-2" type="email" name="email" placeholder="Your email" required>
