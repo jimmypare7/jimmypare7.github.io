@@ -1,104 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jimmy Pare</title>
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background: #fff;
-      color: #222;
-      font-family: 'Inter', Arial, sans-serif;
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
-    .container {
-      max-width: 600px;
-      width: 100%;
-      padding: 40px 20px;
-      box-sizing: border-box;
-      text-align: center;
-    }
-    .headshot {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 24px auto 16px auto;
-      display: block;
-      border: 2px solid #eee;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin: 0 0 12px 0;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-    .subtitle {
-      color: #666;
-      font-size: 1.2rem;
-      margin-bottom: 32px;
-    }
-    .links {
-      margin-bottom: 40px;
-    }
-    .links a {
-      color: #0070f3;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    .links a:hover {
-      color: #0051a8;
-    }
-    section {
-      margin-bottom: 32px;
-      text-align: left;
-    }
-    section h2 {
-      font-size: 1.4rem;
-      margin-bottom: 12px;
-      color: #222;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 4px;
-    }
-    section ul {
-      padding-left: 20px;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Jimmy Pare</h1>
-    <img src="images/Professional_Headshot.JPG" alt="Jimmy Pare Headshot" class="headshot">
-    <div class="subtitle">
-      Mechanical Engineering Student | Business Owner | Problem Solver
-    </div>
-    <div class="links">
-      <a href="mailto:jimmypare7@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/jimmy-par%C3%A9-a0050a347/">LinkedIn</a>
-      <!-- Add more links if you want -->
-    </div>
-    <section id="about">
-      <h2>About</h2>
-      <p>Welcome! My name is Jimmy, I am a mechanical engineering student at The University of Vermont. I use this site to compile some of my personal and school projects. In my free time, I enjoy woodworking, speed cubing, powerlifting, and fishing.</p>
-    </section>
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>Woodworking: End Grain Cutting Boards, Epoxy River Tables, etc.</li>
-        <li>School Projects: Abaqus Simulation, FEA, etc.</li>
-        <li>Speed Cubing: Competitions and techniques.</li>
-        <li>Powerlifting: Training progress and goals.</li>
-      </ul>
-    </section>
-    <!-- Add more sections if needed -->
-  </div>
-</body>
-</html>
+// File: Portfolio.jsx
+// Usage: import and render <Portfolio /> inside your app.
+// Assumes Tailwind CSS is installed and configured.
+
+import React from "react";
+
+const featured = [
+  { title: "Featured Project A", desc: "Short tagline", url: "#" },
+  { title: "Featured Project B", desc: "Short tagline", url: "#" },
+];
+
+const projects = [
+  // Replace src with your images or embed links
+  { title: "Cutting Board — Maple", desc: "End-grain cutting board", img: "/images/cb-maple.jpg", link: "#" },
+  { title: "Epoxy Table", desc: "Live edge + epoxy", img: "/images/epoxy-table.jpg", link: "#" },
+  { title: "School Project X", desc: "Short description", img: "/images/school-x.jpg", link: "#" },
+  // Add / remove items as needed
+];
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-white text-gray-900 antialiased">
+      {/* NAV */}
+      <header className="fixed w-full z-30 bg-white/70 backdrop-blur-md">
+        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+          <a href="#" className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-md bg-gray-900 text-white flex items-center justify-center font-semibold">
+              ZJ
+            </div>
+            <span className="sr-only">Home</span>
+          </a>
+
+          <nav className="space-x-6 hidden md:flex items-center text-sm">
+            <a href="#projects" className="hover:underline">Projects</a>
+            <a href="#extras" className="hover:underline">Extras</a>
+            <a href="#media" className="hover:underline">Media</a>
+            <a href="#contact" className="border px-3 py-1 rounded-md text-sm">Contact Me</a>
+          </nav>
+
+          {/* mobile nav toggle placeholder */}
+          <div className="md:hidden">
+            <button aria-label="open menu">☰</button>
+          </div>
+        </div>
+      </header>
+
+      <main className="pt-28 max-w-5xl mx-auto px-6">
+        {/* HERO */}
+        <section className="grid md:grid-cols-3 gap-8 items-center">
+          <div className="md:col-span-2">
+            <h1 className="text-4xl md:text-5xl font-serif mb-4">Hey, I’m [Your Name].</h1>
+            <p className="text-lg text-gray-700 mb-6">
+              I make stuff — cutting boards, epoxy tables, school projects, and more. Here are some things I’ve built.
+            </p>
+
+            {/* Featured strip */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              {featured.map((f, i) => (
+                <a
+                  key={i}
+                  href={f.url}
+                  className="flex-1 border rounded-lg p-4 hover:shadow-md transition"
+                >
+                  <div className="text-sm uppercase tracking-wide text-gray-500">Featured</div>
+                  <div className="font-semibold mt-1">{f.title}</div>
+                  <div className="text-sm text-gray-600 mt-1">{f.desc}</div>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Headshot / profile image placeholder */}
+          <aside className="flex justify-center md:justify-end">
+            <div className="w-48 h-48 rounded-md overflow-hidden border">
+              {/* Replace this <img> src with your headshot (public folder or external link) */}
+              <img src="/images/headshot.jpg" alt="Headshot" className="object-cover w-full h-full" />
+            </div>
+          </aside>
+        </section>
+
+        {/* Projects */}
+        <section id="projects" className="mt-16">
+          <h2 className="text-2xl font-semibold mb-4">My Projects</h2>
+          <p className="text-gray-600 mb-6">A selection of personal & school work. Click to open project pages or galleries.</p>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((p, i) => (
+              <article key={i} className="border rounded-lg overflow-hidden hover:shadow-lg transition">
+                {/* IMAGE / VIDEO PLACEHOLDER */}
+                <div className="h-48 bg-gray-100">
+                  {/* If it's a video, replace with <video src="..." controls /> or an iframe embed */}
+                  <img src={p.img} alt={p.title} className="object-cover w-full h-full" />
+                </div>
+
+                <div className="p-4">
+                  <h3 className="font-medium">{p.title}</h3>
+                  <p className="text-sm text-gray-600 mt-1">{p.desc}</p>
+                  <div className="mt-3">
+                    <a href={p.link} className="text-sm underline">View →</a>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* Extras */}
+        <section id="extras" className="mt-16">
+          <h2 className="text-2xl font-semibold mb-4">Extras</h2>
+          <p className="text-gray-600 mb-4">Short list of blog posts, side projects, or links.</p>
+
+          <ul className="space-y-2">
+            <li><a href="#" className="underline">Blog post or writeup — short title</a></li>
+            <li><a href="#" className="underline">Tooling or small app</a></li>
+            <li><a href="#" className="underline">Another link / repo</a></li>
+          </ul>
+        </section>
+
+        {/* Media */}
