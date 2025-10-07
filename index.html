@@ -1,119 +1,208 @@
-// File: Portfolio.jsx
-// Usage: import and render <Portfolio /> inside your app.
-// Assumes Tailwind CSS is installed and configured.
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>[Your Name] — Portfolio</title>
 
-import React from "react";
+  <!-- Google fonts (change to your preference) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-const featured = [
-  { title: "Featured Project A", desc: "Short tagline", url: "#" },
-  { title: "Featured Project B", desc: "Short tagline", url: "#" },
-];
+  <!-- Tailwind CDN (play) -->
+  <script>
+    tailwind = { config: {
+      theme: {
+        extend: {
+          fontFamily: {
+            serifHead: ['"DM Serif Display"', 'serif'],
+            ui: ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    } }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-const projects = [
-  // Replace src with your images or embed links
-  { title: "Cutting Board — Maple", desc: "End-grain cutting board", img: "/images/cb-maple.jpg", link: "#" },
-  { title: "Epoxy Table", desc: "Live edge + epoxy", img: "/images/epoxy-table.jpg", link: "#" },
-  { title: "School Project X", desc: "Short description", img: "/images/school-x.jpg", link: "#" },
-  // Add / remove items as needed
-];
+  <style>
+    /* small niceties */
+    :root { color-scheme: light; }
+    body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+  </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+  <!-- Header -->
+  <header class="fixed w-full z-30 bg-white/80 backdrop-blur-md border-b">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-md bg-slate-900 text-white flex items-center justify-center font-semibold">ZJ</div>
+        <span class="sr-only">Home</span>
+      </a>
 
-export default function Portfolio() {
-  return (
-    <div className="min-h-screen bg-white text-gray-900 antialiased">
-      {/* NAV */}
-      <header className="fixed w-full z-30 bg-white/70 backdrop-blur-md">
-        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-md bg-gray-900 text-white flex items-center justify-center font-semibold">
-              ZJ
-            </div>
-            <span className="sr-only">Home</span>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#extras" class="hover:underline">Extras</a>
+        <a href="#media" class="hover:underline">Media</a>
+        <a href="#contact" class="px-3 py-1 border rounded text-sm">Contact</a>
+      </nav>
+
+      <!-- mobile toggle -->
+      <div class="md:hidden">
+        <button id="navToggle" aria-label="Open menu" class="text-xl">☰</button>
+      </div>
+    </div>
+
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t">
+      <div class="px-6 py-4 space-y-2">
+        <a href="#projects" class="block">Projects</a>
+        <a href="#extras" class="block">Extras</a>
+        <a href="#media" class="block">Media</a>
+        <a href="#contact" class="block">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-28 max-w-5xl mx-auto px-6">
+    <!-- HERO -->
+    <section class="grid md:grid-cols-3 gap-8 items-center">
+      <div class="md:col-span-2">
+        <h1 class="text-4xl md:text-5xl font-serifHead mb-4">Hey — I’m <span class="font-semibold">[Your Name]</span>.</h1>
+        <p class="text-lg text-slate-700 mb-6">I build things: woodworking (cutting boards, epoxy tables), school projects, and tools. Below are featured pieces and a gallery of recent work.</p>
+
+        <!-- featured strip -->
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="#" class="flex-1 border rounded-lg p-4 hover:shadow-md transition">
+            <div class="text-xs uppercase tracking-wide text-slate-500">Featured</div>
+            <div class="font-semibold mt-1">Featured Project A</div>
+            <div class="text-sm text-slate-600 mt-1">Short tagline or tech used</div>
           </a>
-
-          <nav className="space-x-6 hidden md:flex items-center text-sm">
-            <a href="#projects" className="hover:underline">Projects</a>
-            <a href="#extras" className="hover:underline">Extras</a>
-            <a href="#media" className="hover:underline">Media</a>
-            <a href="#contact" className="border px-3 py-1 rounded-md text-sm">Contact Me</a>
-          </nav>
-
-          {/* mobile nav toggle placeholder */}
-          <div className="md:hidden">
-            <button aria-label="open menu">☰</button>
-          </div>
+          <a href="#" class="flex-1 border rounded-lg p-4 hover:shadow-md transition">
+            <div class="text-xs uppercase tracking-wide text-slate-500">Featured</div>
+            <div class="font-semibold mt-1">Featured Project B</div>
+            <div class="text-sm text-slate-600 mt-1">Short tagline or shop notes</div>
+          </a>
         </div>
-      </header>
+      </div>
 
-      <main className="pt-28 max-w-5xl mx-auto px-6">
-        {/* HERO */}
-        <section className="grid md:grid-cols-3 gap-8 items-center">
-          <div className="md:col-span-2">
-            <h1 className="text-4xl md:text-5xl font-serif mb-4">Hey, I’m [Your Name].</h1>
-            <p className="text-lg text-gray-700 mb-6">
-              I make stuff — cutting boards, epoxy tables, school projects, and more. Here are some things I’ve built.
-            </p>
+      <!-- headshot -->
+      <aside class="flex justify-center md:justify-end">
+        <div class="w-48 h-48 rounded-md overflow-hidden border">
+          <!-- Replace with /images/headshot.jpg or absolute URL -->
+          <img src="/images/headshot.jpg" alt="Headshot" class="object-cover w-full h-full" />
+        </div>
+      </aside>
+    </section>
 
-            {/* Featured strip */}
-            <div className="flex flex-col sm:flex-row gap-3">
-              {featured.map((f, i) => (
-                <a
-                  key={i}
-                  href={f.url}
-                  className="flex-1 border rounded-lg p-4 hover:shadow-md transition"
-                >
-                  <div className="text-sm uppercase tracking-wide text-gray-500">Featured</div>
-                  <div className="font-semibold mt-1">{f.title}</div>
-                  <div className="text-sm text-gray-600 mt-1">{f.desc}</div>
-                </a>
-              ))}
-            </div>
+    <!-- Projects -->
+    <section id="projects" class="mt-16">
+      <h2 class="text-2xl font-semibold mb-4">My Projects</h2>
+      <p class="text-slate-600 mb-6">Personal & school work. Replace images with your own and link each item to a project page or gallery.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project card (copy / paste to add more) -->
+        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition">
+          <div class="h-48 bg-gray-100">
+            <!-- image placeholder: put file at /images/cb-maple.jpg -->
+            <img src="/images/cb-maple.jpg" alt="Cutting board — maple" class="object-cover w-full h-full" />
+            <!-- For video: use <video controls src="/videos/demo.mp4" class="w-full h-full object-cover"></video> or an iframe for YouTube -->
           </div>
-
-          {/* Headshot / profile image placeholder */}
-          <aside className="flex justify-center md:justify-end">
-            <div className="w-48 h-48 rounded-md overflow-hidden border">
-              {/* Replace this <img> src with your headshot (public folder or external link) */}
-              <img src="/images/headshot.jpg" alt="Headshot" className="object-cover w-full h-full" />
-            </div>
-          </aside>
-        </section>
-
-        {/* Projects */}
-        <section id="projects" className="mt-16">
-          <h2 className="text-2xl font-semibold mb-4">My Projects</h2>
-          <p className="text-gray-600 mb-6">A selection of personal & school work. Click to open project pages or galleries.</p>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((p, i) => (
-              <article key={i} className="border rounded-lg overflow-hidden hover:shadow-lg transition">
-                {/* IMAGE / VIDEO PLACEHOLDER */}
-                <div className="h-48 bg-gray-100">
-                  {/* If it's a video, replace with <video src="..." controls /> or an iframe embed */}
-                  <img src={p.img} alt={p.title} className="object-cover w-full h-full" />
-                </div>
-
-                <div className="p-4">
-                  <h3 className="font-medium">{p.title}</h3>
-                  <p className="text-sm text-gray-600 mt-1">{p.desc}</p>
-                  <div className="mt-3">
-                    <a href={p.link} className="text-sm underline">View →</a>
-                  </div>
-                </div>
-              </article>
-            ))}
+          <div class="p-4">
+            <h3 class="font-medium">Cutting Board — Maple</h3>
+            <p class="text-sm text-slate-600 mt-1">End-grain board, beeswax finish.</p>
+            <div class="mt-3"><a href="#" class="text-sm underline">View →</a></div>
           </div>
-        </section>
+        </article>
 
-        {/* Extras */}
-        <section id="extras" className="mt-16">
-          <h2 className="text-2xl font-semibold mb-4">Extras</h2>
-          <p className="text-gray-600 mb-4">Short list of blog posts, side projects, or links.</p>
+        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition">
+          <div class="h-48 bg-gray-100">
+            <img src="/images/epoxy-table.jpg" alt="Epoxy table" class="object-cover w-full h-full" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium">Epoxy Table</h3>
+            <p class="text-sm text-slate-600 mt-1">Live-edge slab and epoxy river.</p>
+            <div class="mt-3"><a href="#" class="text-sm underline">View →</a></div>
+          </div>
+        </article>
 
-          <ul className="space-y-2">
-            <li><a href="#" className="underline">Blog post or writeup — short title</a></li>
-            <li><a href="#" className="underline">Tooling or small app</a></li>
-            <li><a href="#" className="underline">Another link / repo</a></li>
-          </ul>
-        </section>
+        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition">
+          <div class="h-48 bg-gray-100">
+            <img src="/images/school-project.jpg" alt="School project" class="object-cover w-full h-full" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium">School Project X</h3>
+            <p class="text-sm text-slate-600 mt-1">Short description and outcomes.</p>
+            <div class="mt-3"><a href="#" class="text-sm underline">View →</a></div>
+          </div>
+        </article>
+        <!-- end project cards -->
+      </div>
+    </section>
 
-        {/* Media */}
+    <!-- Extras -->
+    <section id="extras" class="mt-16">
+      <h2 class="text-2xl font-semibold mb-4">Extras</h2>
+      <p class="text-slate-600 mb-4">Blog posts, tools, writeups or small utilities.</p>
+      <ul class="space-y-2">
+        <li><a href="#" class="underline">Build log: Maple cutting board</a></li>
+        <li><a href="#" class="underline">Tooling: Shop jigs & fixtures</a></li>
+        <li><a href="#" class="underline">Github: repos & utilities</a></li>
+      </ul>
+    </section>
+
+    <!-- Media -->
+    <section id="media" class="mt-16">
+      <h2 class="text-2xl font-semibold mb-4">Media</h2>
+      <p class="text-slate-600 mb-6">Videos, articles, or press mentions.</p>
+
+      <div class="space-y-3">
+        <div class="border rounded p-3">
+          <a href="#" class="font-medium underline">YouTube: Epoxy table build</a>
+          <div class="text-sm text-slate-600">Short blurb & date</div>
+        </div>
+
+        <div class="border rounded p-3">
+          <a href="#" class="font-medium underline">Article: Local paper mention</a>
+          <div class="text-sm text-slate-600">Blurb & link</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mt-16 mb-24">
+      <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
+      <p class="text-slate-600 mb-6">Want to work together? Drop me a line.</p>
+
+      <!-- Simple mailto form — replace with Formspree or static backend if you want real submissions -->
+      <form class="max-w-xl grid gap-3" action="mailto:you@example.com" method="post" enctype="text/plain">
+        <input class="border rounded p-2" type="text" name="name" placeholder="Your name" required>
+        <input class="border rounded p-2" type="email" name="email" placeholder="Your email" required>
+        <textarea class="border rounded p-2 h-28" name="message" placeholder="Your message" required></textarea>
+        <div><button class="px-4 py-2 rounded bg-slate-900 text-white" type="submit">Send Message</button></div>
+      </form>
+    </section>
+
+    <footer class="py-10 text-sm text-slate-600 border-t mt-12">
+      <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>© <span id="year"></span> [Your Name]. All rights reserved.</div>
+        <div class="space-x-4">
+          <a href="#" class="underline">Github</a>
+          <a href="#" class="underline">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // mobile menu toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    navToggle?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
