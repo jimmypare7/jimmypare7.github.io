@@ -76,7 +76,7 @@
 <section class="grid md:grid-cols-3 gap-8 items-center">
   <div class="md:col-span-2 flex flex-col">
     <h1 class="text-4xl md:text-5xl font-serifHead mb-4">
-      Hi! — I’m <span class="font-semibold">Jimmy</span>.
+      Hi! — I'm <span class="font-semibold">Jimmy</span>.
     </h1>
     <p class="text-lg text-slate-700 mb-6">
       I am a student studying mechanical engineering at the University of Vermont. 
@@ -97,13 +97,13 @@
     <div class="flex flex-col sm:flex-row gap-3">
       <a href="#" class="flex-1 border rounded-lg p-4 hover:shadow-md transition cursor-default">
         <div class="text-xs uppercase tracking-wide text-slate-500">Featured</div>
-        <div class="font-semibold mt-1">Chaos Cutting Boards</div>
-        <div class="text-sm text-slate-600 mt-1">A series of end grain cutting boards using maple, walnut, and cherry.</div>
+        <div class="font-semibold mt-1">Mechatronics Car</div>
+        <div class="text-sm text-slate-600 mt-1">Autonomous robotic car designed to sort plastic bottles in an unknown course.</div>
       </a>
       <a href="#" class="flex-1 border rounded-lg p-4 hover:shadow-md transition cursor-default">
         <div class="text-xs uppercase tracking-wide text-slate-500">Featured</div>
-        <div class="font-semibold mt-1">Harmonic Analysis of Vehicle in Python.</div>
-        <div class="text-sm text-slate-600 mt-1">I simulated the suspension of a 2D vehicle to determine the natural frequency of the system in python for my System Dynamics course.</div>
+        <div class="font-semibold mt-1">Chaos Cutting Boards</div>
+        <div class="text-sm text-slate-600 mt-1">A series of end grain cutting boards using maple, walnut, and cherry.</div>
       </a>
     </div>
   </div>
@@ -125,37 +125,37 @@
       <h2 class="text-2xl font-semibold mb-4">School Projects</h2>
       <p class="text-slate-600 mb-6">Academic work and engineering projects at the University of Vermont.</p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Mechatronics Car -->
+        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
+          @click="openModal('mechatronics')">
+          <div class="h-48 bg-gray-100">
+            <img src="media/image5.png" alt="Mechatronics Car" class="object-cover w-full h-full" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium">Mechatronics Car</h3>
+            <p class="text-sm text-slate-600 mt-1">Autonomous robotic car designed to sort plastic bottles in an unknown course.</p>
+          </div>
+        </article>
         <!-- Speed of Light Experiment -->
         <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
           @click="openModal('speedoflight')">
           <div class="h-48 bg-gray-100">
-            <img src="CuttingBoards3_2.png" alt="Speed of Light Experiment" class="object-cover w-full h-full" />
+            <img src="media/image6.png" alt="Speed of Light Experiment" class="object-cover w-full h-full" />
           </div>
           <div class="p-4">
             <h3 class="font-medium">Speed of Light Experiment</h3>
-            <p class="text-sm text-slate-600 mt-1">Measured the speed of light using modern lab equipment in a physics course.</p>
+            <p class="text-sm text-slate-600 mt-1">Measured the speed of light with 1.9% error using a laser, prism, and spinning mirror.</p>
           </div>
         </article>
-        <!-- Heat Transfer Simulation -->
+        <!-- ABAQUS Simulation of Compound Bow Shot -->
         <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
-          @click="openModal('heattransfer')">
+          @click="openModal('compoundbow')">
           <div class="h-48 bg-gray-100">
-            <img src="CuttingBoards3WIP.png" alt="Heat Transfer Simulation" class="object-cover w-full h-full" />
+            <img src="media/image4.png" alt="Compound Bow Simulation" class="object-cover w-full h-full" />
           </div>
           <div class="p-4">
-            <h3 class="font-medium">Heat Transfer Simulation</h3>
-            <p class="text-sm text-slate-600 mt-1">Simulated heat transfer in solids using MATLAB and compared to analytical results.</p>
-          </div>
-        </article>
-        <!-- Harmonic Analysis of Vehicle -->
-        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
-          @click="openModal('harmonicanalysis')">
-          <div class="h-48 bg-gray-100">
-            <img src="CuttingBoards3_2.png" alt="Harmonic Analysis of Vehicle" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-4">
-            <h3 class="font-medium">Harmonic Analysis of Vehicle</h3>
-            <p class="text-sm text-slate-600 mt-1">Simulated a 2D vehicle suspension in Python for System Dynamics at UVM.</p>
+            <h3 class="font-medium">Compound Bow Simulation</h3>
+            <p class="text-sm text-slate-600 mt-1">Dynamic simulation in ABAQUS of a compound bow shooting an arrow.</p>
           </div>
         </article>
       </div>
@@ -166,48 +166,48 @@
       <h2 class="text-2xl font-semibold mb-4">Personal Projects</h2>
       <p class="text-slate-600 mb-6">Projects I've built for fun, learning, and personal growth.</p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Cutting Boards -->
+        <!-- Chaos Cutting Boards -->
         <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
           @click="openModal('cuttingboards')">
           <div class="h-48 bg-gray-100">
-            <img src="CuttingBoards3_2.png" alt="Cutting Boards" class="object-cover w-full h-full" />
+            <img src="media/image3.png" alt="Chaos Cutting Boards" class="object-cover w-full h-full" />
           </div>
           <div class="p-4">
-            <h3 class="font-medium">Cutting Boards</h3>
+            <h3 class="font-medium">Chaos Cutting Boards</h3>
             <p class="text-sm text-slate-600 mt-1">Handcrafted end-grain boards made from maple, walnut, and cherry.</p>
           </div>
         </article>
-        <!-- Black Desk Build -->
+        <!-- Black Epoxy Desk -->
         <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
           @click="openModal('blackdesk')">
           <div class="h-48 bg-gray-100">
-            <img src="BlackDesk0.jpg" alt="Black Desk Build" class="object-cover w-full h-full" />
+            <img src="media/image2.jpg" alt="Black Epoxy Desk" class="object-cover w-full h-full" />
           </div>
           <div class="p-4">
-            <h3 class="font-medium">Black Desk Build</h3>
-            <p class="text-sm text-slate-600 mt-1">Designed and built a minimalist black desk as a home workspace upgrade.</p>
+            <h3 class="font-medium">Black Epoxy Desk</h3>
+            <p class="text-sm text-slate-600 mt-1">Butternut wood desk with black epoxy river and standing desk base.</p>
           </div>
         </article>
-        <!-- Cutting Boards (WIP) -->
+        <!-- Blue Epoxy Desk -->
         <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
-          @click="openModal('cuttingboardswip')">
+          @click="openModal('bluedesk')">
           <div class="h-48 bg-gray-100">
-            <img src="CuttingBoards3WIP.png" alt="Cutting Boards - WIP" class="object-cover w-full h-full" />
+            <img src="media/image7.png" alt="Blue Epoxy Desk" class="object-cover w-full h-full" />
           </div>
           <div class="p-4">
-            <h3 class="font-medium">Cutting Boards (WIP)</h3>
-            <p class="text-sm text-slate-600 mt-1">Ongoing experimentation with patterns and finishes for creative woodworking.</p>
+            <h3 class="font-medium">Blue Epoxy Desk</h3>
+            <p class="text-sm text-slate-600 mt-1">Ambrosia maple desk with blue epoxy and hardwood floor finish.</p>
           </div>
         </article>
         <!-- Slipknot CNC Sign -->
         <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
           @click="openModal('slipknotsign')">
           <div class="h-48 bg-gray-100">
-            <img src="SlipknotSign1.png" alt="Slipknot CNC Sign" class="object-cover w-full h-full" />
+            <img src="media/image1.png" alt="Slipknot CNC Sign" class="object-cover w-full h-full" />
           </div>
           <div class="p-4">
             <h3 class="font-medium">Slipknot CNC Sign</h3>
-            <p class="text-sm text-slate-600 mt-1">Designed and fabricated a custom sign using CNC inspired by Slipknot.</p>
+            <p class="text-sm text-slate-600 mt-1">CNC-cut acrylic sign with LED lights and light refraction effects.</p>
           </div>
         </article>
       </div>
@@ -227,59 +227,61 @@
         <button class="absolute top-2 right-2 text-2xl" @click="closeModal()">&times;</button>
         
         <!-- Modal content for each project -->
+        <template x-if="modalProject === 'mechatronics'">
+          <div>
+            <h2 class="text-xl font-bold mb-2">Mechatronics Car</h2>
+            <img src="media/image5.png" alt="Mechatronics Car" class="mb-4 w-full rounded" />
+            <p>Here is a robotic car I made for a Mechatronics course. It was made to compete in a competition to move plastic bottles into different bins throughout a course. What was particularly difficult about this competition was the course was not known ahead of time, there were several aspects that were unknown. In addition to this, the robot had to be completely autonomous, meaning it couldn't simply be controlled by a remote control. To combat these challenges, my team utilized an ultrasonic sensor to give position data to the microcontroller, which was then processed to tell the robot how to move.</p>
+            <a href="ME_2240_Final_Report_Team_6_REVISED.pdf" target="_blank" class="inline-block mt-4 px-5 py-2 rounded bg-blue-700 text-white font-semibold hover:bg-blue-800 transition">
+              View Full Report (PDF)
+            </a>
+          </div>
+        </template>
         <template x-if="modalProject === 'speedoflight'">
           <div>
             <h2 class="text-xl font-bold mb-2">Speed of Light Experiment</h2>
-            <img src="CuttingBoards3_2.png" alt="Speed of Light Experiment" class="mb-4 w-full rounded" />
-            <p>Measured the speed of light using lab equipment and compared to theoretical values in a physics course at UVM. The experiment involved setting up a laser and timing the light's travel over a known distance.</p>
-            <a href="SpeedOfLightLab.pdf" target="_blank" class="inline-block mt-4 px-5 py-2 rounded bg-blue-700 text-white font-semibold hover:bg-blue-800 transition">
+            <img src="media/image6.png" alt="Speed of Light Experiment" class="mb-4 w-full rounded" />
+            <p>For my Waves and Quanta course I was able to measure the speed of light with 1.9% error. I was able to do this by using a laser, prism, and a series of mirrors, one of which was attached to a motor spinning at a known RPM. In short, the light would hit the spinning mirror and travel a set distance before returning. By the time the light returned, the motor had spun a very small amount, causing the light to return to a different position than when it first was emitted. By using the change in position, speed of the motor, and total distance travelled by the light, the speed of light was calculated with good precision.</p>
+            <p class="mt-2">I have completed many labs in my time at UVM but this may be the most memorable. I did not realize that it was even possible to measure the speed of light without extremely advanced equipment, so when I first started to see the light shift as the motor sped up was a great feeling.</p>
+            <a href="PHYS2500_Lab_1_Speed_of_Light.pdf" target="_blank" class="inline-block mt-4 px-5 py-2 rounded bg-blue-700 text-white font-semibold hover:bg-blue-800 transition">
               View Full Lab Report (PDF)
             </a>
           </div>
         </template>
-        <template x-if="modalProject === 'heattransfer'">
+        <template x-if="modalProject === 'compoundbow'">
           <div>
-            <h2 class="text-xl font-bold mb-2">Heat Transfer Simulation</h2>
-            <img src="CuttingBoards3WIP.png" alt="Heat Transfer Simulation" class="mb-4 w-full rounded" />
-            <p>Simulated transient and steady-state heat conduction in solids using MATLAB. The project compared simulation results to analytical solutions and explored the impact of boundary conditions.</p>
-            <a href="ME2240_HeatTransferLab.pdf" target="_blank" class="inline-block mt-4 px-5 py-2 rounded bg-blue-700 text-white font-semibold hover:bg-blue-800 transition">
-              View Full Lab Report (PDF)
-            </a>
-          </div>
-        </template>
-        <template x-if="modalProject === 'harmonicanalysis'">
-          <div>
-            <h2 class="text-xl font-bold mb-2">Harmonic Analysis of Vehicle</h2>
-            <img src="CuttingBoards3_2.png" alt="Harmonic Analysis of Vehicle" class="mb-4 w-full rounded" />
-            <p>Simulated a 2D vehicle suspension to determine natural frequency using Python for System Dynamics. Included modeling of masses, springs, and dampers, and extraction of key performance data.</p>
+            <h2 class="text-xl font-bold mb-2">ABAQUS Simulation of Compound Bow Shot</h2>
+            <img src="media/image4.png" alt="Compound Bow Simulation" class="mb-4 w-full rounded" />
+            <p>I am currently working on performing a dynamic simulation in ABAQUS of a compound bow shooting an arrow. The geometry is extremely complex, so I look forward to seeing how I can mesh the part to reduce the computational requirement without sacrificing simulation accuracy.</p>
           </div>
         </template>
         <template x-if="modalProject === 'cuttingboards'">
           <div>
-            <h2 class="text-xl font-bold mb-2">Cutting Boards</h2>
-            <img src="CuttingBoards3_2.png" alt="Cutting Boards" class="mb-4 w-full rounded" />
-            <p>Handcrafted cutting boards in multiple woods. Used end-grain construction for durability and food safety, finished with beeswax and mineral oil. Created both for gifting and personal use.</p>
+            <h2 class="text-xl font-bold mb-2">Chaos Cutting Boards</h2>
+            <img src="media/image3.png" alt="Chaos Cutting Boards" class="mb-4 w-full rounded" />
+            <p>To make these cutting boards, I used maple, walnut, and cherry. To create the chaotic pattern, I start off by making a normal, long grain cutting board but then repeatedly rip the board to different widths and re-glue. Almost like making a cutting board out of a cutting board out of a cutting board. After repeatedly ripping the boards with the wood grain and glueing, the final cut goes across the wood grain and allows the chaotic pattern to be revealed. To finish the boards, I soak in mineral oil, apply wood butter, and put feet on the boards. The feet are very cheap but I feel they make the board feel significantly higher quality.</p>
+            <p class="mt-2">End grain cutting boards are more desirable than more common long grain cutting boards because of their durability and almost 'self healing' properties. When an end grain cutting board is sliced by a knife, the gap can be closed over time as the wood naturally expands and contracts. This is because the wood expands primarily across the grain instead of with the grain.</p>
           </div>
         </template>
         <template x-if="modalProject === 'blackdesk'">
           <div>
-            <h2 class="text-xl font-bold mb-2">Black Desk Build</h2>
-            <img src="BlackDesk0.jpg" alt="Black Desk Build" class="mb-4 w-full rounded" />
-            <p>Designed and built a custom black desk for a modern home office. The project involved woodworking, finishing, and cable management solutions for a clean workspace.</p>
+            <h2 class="text-xl font-bold mb-2">Black Epoxy Desk</h2>
+            <img src="media/image2.jpg" alt="Black Epoxy Desk" class="mb-4 w-full rounded" />
+            <p>Before my Junior year at UVM, I created this desk to do school work on. The wood is butternut with an epoxy river down the middle of the slab. I used a black pigment in the epoxy instead of a dye because it adds a level of sheen and depth to the mixture. Since this photo was taken, I have swapped the legs to a standing desk base, so I can sit or stand while doing my school work.</p>
           </div>
         </template>
-        <template x-if="modalProject === 'cuttingboardswip'">
+        <template x-if="modalProject === 'bluedesk'">
           <div>
-            <h2 class="text-xl font-bold mb-2">Cutting Boards (WIP)</h2>
-            <img src="CuttingBoards3WIP.png" alt="Cutting Boards WIP" class="mb-4 w-full rounded" />
-            <p>Ongoing work experimenting with geometric patterns, resin inlays, and new finishing techniques. This project is a creative outlet for testing new woodworking ideas.</p>
+            <h2 class="text-xl font-bold mb-2">Blue Epoxy Desk</h2>
+            <img src="media/image7.png" alt="Blue Epoxy Desk" class="mb-4 w-full rounded" />
+            <p>This desk follows the black epoxy desk in the series of epoxy builds. This desk was made from ambrosia maple and epoxy with blue pigment. The finish I use on large slab builds is actually a hardwood floor finish as it has good durability, looks great, and easy to apply with no fumes.</p>
           </div>
         </template>
         <template x-if="modalProject === 'slipknotsign'">
           <div>
             <h2 class="text-xl font-bold mb-2">Slipknot CNC Sign</h2>
-            <img src="SlipknotSign1.png" alt="Slipknot CNC Sign" class="mb-4 w-full rounded" />
-            <p>Designed in CAD and produced on a CNC router, this sign pays homage to the band Slipknot. The build involved finishing, painting, and wall mounting.</p>
+            <img src="media/image1.png" alt="Slipknot CNC Sign" class="mb-4 w-full rounded" />
+            <p>I made this sign by using a CNC machine and two types of acrylic. There is a strip of LED lights around the outside of the clear acrylic which give a pretty neat light refraction effect. Originally, I was planning on engraving the 'Slipknot' logo instead of cutting it out but I found that the light did not refract how I wanted it to.</p>
           </div>
         </template>
       </div>
@@ -328,7 +330,7 @@
         <div>© <span id="year"></span> Jimmy Pare. All rights reserved.</div>
         <div class="space-x-4">
           <a href="#" class="underline">Github</a>
-          <a href="#" class="underline">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/jimmypare7/" class="underline">LinkedIn</a>
         </div>
       </div>
     </footer>
