@@ -74,7 +74,6 @@
   >
    <!-- HERO -->
 <section class="grid md:grid-cols-3 gap-8 items-center">
-  <!-- Left: Intro, then Featured Projects -->
   <div class="md:col-span-2 flex flex-col">
     <h1 class="text-4xl md:text-5xl font-serifHead mb-4">
       Hi! — I’m <span class="font-semibold">Jimmy</span>.
@@ -84,7 +83,6 @@
       I use this page to keep track of my school projects, personal projects, and hobbies. 
       Feel free to send me a message if there are any questions!
     </p>
-    <!-- On mobile, show headshot + resume here -->
     <div class="flex flex-col items-center md:hidden mb-6">
       <div class="w-44 h-44 rounded-md overflow-hidden border mb-4">
         <img src="Professional Headshot Cropped.JPG" alt="Headshot" class="object-cover w-full h-full" />
@@ -96,7 +94,6 @@
         LinkedIn
       </a>
     </div>
-    <!-- featured strip -->
     <div class="flex flex-col sm:flex-row gap-3">
       <a href="#" class="flex-1 border rounded-lg p-4 hover:shadow-md transition cursor-default">
         <div class="text-xs uppercase tracking-wide text-slate-500">Featured</div>
@@ -110,7 +107,6 @@
       </a>
     </div>
   </div>
-  <!-- Right: Headshot + Resume Button (desktop only) -->
   <aside class="hidden md:flex flex-col items-center md:items-end">
     <div class="w-44 h-44 md:w-52 md:h-52 rounded-md overflow-hidden border mb-4">
       <img src="Professional Headshot Cropped.JPG" alt="Headshot" class="object-cover w-full h-full" />
@@ -118,7 +114,7 @@
     <a href="Resume - Jimmy Pare.pdf" target="_blank" class="inline-block px-5 py-2 mb-2 rounded bg-slate-900 text-white font-semibold hover:bg-slate-700 transition">
       View Resume (PDF)
     </a>
-    <a href="https://www.linkedin.com/in/jimmypare/" target="_blank" class="inline-block px-5 py-2 rounded bg-blue-700 text-white font-semibold hover:bg-blue-800 transition">
+    <a href="https://www.linkedin.com/in/jimmypare7/" target="_blank" class="inline-block px-5 py-2 rounded bg-blue-700 text-white font-semibold hover:bg-blue-800 transition">
       LinkedIn
     </a>
   </aside>
@@ -236,6 +232,9 @@
             <h2 class="text-xl font-bold mb-2">Speed of Light Experiment</h2>
             <img src="CuttingBoards3_2.png" alt="Speed of Light Experiment" class="mb-4 w-full rounded" />
             <p>Measured the speed of light using lab equipment and compared to theoretical values in a physics course at UVM. The experiment involved setting up a laser and timing the light's travel over a known distance.</p>
+            <a href="SpeedOfLightLab.pdf" target="_blank" class="inline-block mt-4 px-5 py-2 rounded bg-blue-700 text-white font-semibold hover:bg-blue-800 transition">
+              View Full Lab Report (PDF)
+            </a>
           </div>
         </template>
         <template x-if="modalProject === 'heattransfer'">
@@ -243,6 +242,9 @@
             <h2 class="text-xl font-bold mb-2">Heat Transfer Simulation</h2>
             <img src="CuttingBoards3WIP.png" alt="Heat Transfer Simulation" class="mb-4 w-full rounded" />
             <p>Simulated transient and steady-state heat conduction in solids using MATLAB. The project compared simulation results to analytical solutions and explored the impact of boundary conditions.</p>
+            <a href="ME2240_HeatTransferLab.pdf" target="_blank" class="inline-block mt-4 px-5 py-2 rounded bg-blue-700 text-white font-semibold hover:bg-blue-800 transition">
+              View Full Lab Report (PDF)
+            </a>
           </div>
         </template>
         <template x-if="modalProject === 'harmonicanalysis'">
