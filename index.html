@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Jimmy Pare — Portfolio</title>
 
-  <!-- Google fonts (change to your preference) -->
+  <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CDN (play) -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind = { config: {
@@ -23,6 +23,8 @@
       }
     } }
   </script>
+  <!-- Alpine.js for modals -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
   <style>
     :root { color-scheme: light; }
@@ -61,8 +63,15 @@
     </div>
   </header>
 
-  <main class="pt-28 max-w-5xl mx-auto px-6">
-
+  <main 
+    class="pt-28 max-w-5xl mx-auto px-6"
+    x-data="{
+      modalOpen: false,
+      modalProject: null,
+      openModal(project) { this.modalProject = project; this.modalOpen = true; },
+      closeModal() { this.modalOpen = false; }
+    }"
+  >
    <!-- HERO -->
 <section class="grid md:grid-cols-3 gap-8 items-center">
   <!-- Left: Intro, then Featured Projects -->
@@ -120,34 +129,37 @@
       <h2 class="text-2xl font-semibold mb-4">School Projects</h2>
       <p class="text-slate-600 mb-6">Academic work and engineering projects at the University of Vermont.</p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- School Project 1 -->
-        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition">
+        <!-- Speed of Light Experiment -->
+        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
+          @click="openModal('speedoflight')">
           <div class="h-48 bg-gray-100">
-            <img src="CuttingBoards3_2.png" alt="Dynamics Project Plot" class="object-cover w-full h-full" />
+            <img src="CuttingBoards3_2.png" alt="Speed of Light Experiment" class="object-cover w-full h-full" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium">Speed of Light Experiment</h3>
+            <p class="text-sm text-slate-600 mt-1">Measured the speed of light using modern lab equipment in a physics course.</p>
+          </div>
+        </article>
+        <!-- Heat Transfer Simulation -->
+        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
+          @click="openModal('heattransfer')">
+          <div class="h-48 bg-gray-100">
+            <img src="CuttingBoards3WIP.png" alt="Heat Transfer Simulation" class="object-cover w-full h-full" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium">Heat Transfer Simulation</h3>
+            <p class="text-sm text-slate-600 mt-1">Simulated heat transfer in solids using MATLAB and compared to analytical results.</p>
+          </div>
+        </article>
+        <!-- Harmonic Analysis of Vehicle -->
+        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
+          @click="openModal('harmonicanalysis')">
+          <div class="h-48 bg-gray-100">
+            <img src="CuttingBoards3_2.png" alt="Harmonic Analysis of Vehicle" class="object-cover w-full h-full" />
           </div>
           <div class="p-4">
             <h3 class="font-medium">Harmonic Analysis of Vehicle</h3>
-            <p class="text-sm text-slate-600 mt-1">Simulated a 2D vehicle suspension in Python for System Dynamics at UVM. Plotted frequency results.</p>
-          </div>
-        </article>
-        <!-- School Project 2 -->
-        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition">
-          <div class="h-48 bg-gray-100">
-            <img src="CuttingBoards3WIP.png" alt="School Project - Cutting Boards in Progress" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-4">
-            <h3 class="font-medium">Cutting Boards (In Progress)</h3>
-            <p class="text-sm text-slate-600 mt-1">Progress photo from a collaborative woodshop project for a course at UVM.</p>
-          </div>
-        </article>
-        <!-- School Project 3 -->
-        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition">
-          <div class="h-48 bg-gray-100">
-            <img src="SlipknotSign1.png" alt="Slipknot Sign - CNC Project" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-4">
-            <h3 class="font-medium">Slipknot CNC Sign</h3>
-            <p class="text-sm text-slate-600 mt-1">Designed and fabricated a custom sign using CNC for a design class assignment.</p>
+            <p class="text-sm text-slate-600 mt-1">Simulated a 2D vehicle suspension in Python for System Dynamics at UVM.</p>
           </div>
         </article>
       </div>
@@ -158,18 +170,20 @@
       <h2 class="text-2xl font-semibold mb-4">Personal Projects</h2>
       <p class="text-slate-600 mb-6">Projects I've built for fun, learning, and personal growth.</p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Personal Project 1 -->
-        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition">
+        <!-- Cutting Boards -->
+        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
+          @click="openModal('cuttingboards')">
           <div class="h-48 bg-gray-100">
-            <img src="CuttingBoards3_2.png" alt="Personal - Cutting Boards" class="object-cover w-full h-full" />
+            <img src="CuttingBoards3_2.png" alt="Cutting Boards" class="object-cover w-full h-full" />
           </div>
           <div class="p-4">
             <h3 class="font-medium">Cutting Boards</h3>
             <p class="text-sm text-slate-600 mt-1">Handcrafted end-grain boards made from maple, walnut, and cherry.</p>
           </div>
         </article>
-        <!-- Personal Project 2 -->
-        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition">
+        <!-- Black Desk Build -->
+        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
+          @click="openModal('blackdesk')">
           <div class="h-48 bg-gray-100">
             <img src="BlackDesk0.jpg" alt="Black Desk Build" class="object-cover w-full h-full" />
           </div>
@@ -178,8 +192,9 @@
             <p class="text-sm text-slate-600 mt-1">Designed and built a minimalist black desk as a home workspace upgrade.</p>
           </div>
         </article>
-        <!-- Personal Project 3 -->
-        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition">
+        <!-- Cutting Boards (WIP) -->
+        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
+          @click="openModal('cuttingboardswip')">
           <div class="h-48 bg-gray-100">
             <img src="CuttingBoards3WIP.png" alt="Cutting Boards - WIP" class="object-cover w-full h-full" />
           </div>
@@ -188,8 +203,85 @@
             <p class="text-sm text-slate-600 mt-1">Ongoing experimentation with patterns and finishes for creative woodworking.</p>
           </div>
         </article>
+        <!-- Slipknot CNC Sign -->
+        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
+          @click="openModal('slipknotsign')">
+          <div class="h-48 bg-gray-100">
+            <img src="SlipknotSign1.png" alt="Slipknot CNC Sign" class="object-cover w-full h-full" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium">Slipknot CNC Sign</h3>
+            <p class="text-sm text-slate-600 mt-1">Designed and fabricated a custom sign using CNC inspired by Slipknot.</p>
+          </div>
+        </article>
       </div>
     </section>
+
+    <!-- Project Modal -->
+    <div
+      x-show="modalOpen"
+      x-transition
+      class="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50"
+      style="display: none;"
+      @keydown.escape.window="closeModal()"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full relative"
+           @click.away="closeModal()">
+        <!-- Close Button -->
+        <button class="absolute top-2 right-2 text-2xl" @click="closeModal()">&times;</button>
+        
+        <!-- Modal content for each project -->
+        <template x-if="modalProject === 'speedoflight'">
+          <div>
+            <h2 class="text-xl font-bold mb-2">Speed of Light Experiment</h2>
+            <img src="CuttingBoards3_2.png" alt="Speed of Light Experiment" class="mb-4 w-full rounded" />
+            <p>Measured the speed of light using lab equipment and compared to theoretical values in a physics course at UVM. The experiment involved setting up a laser and timing the light's travel over a known distance.</p>
+          </div>
+        </template>
+        <template x-if="modalProject === 'heattransfer'">
+          <div>
+            <h2 class="text-xl font-bold mb-2">Heat Transfer Simulation</h2>
+            <img src="CuttingBoards3WIP.png" alt="Heat Transfer Simulation" class="mb-4 w-full rounded" />
+            <p>Simulated transient and steady-state heat conduction in solids using MATLAB. The project compared simulation results to analytical solutions and explored the impact of boundary conditions.</p>
+          </div>
+        </template>
+        <template x-if="modalProject === 'harmonicanalysis'">
+          <div>
+            <h2 class="text-xl font-bold mb-2">Harmonic Analysis of Vehicle</h2>
+            <img src="CuttingBoards3_2.png" alt="Harmonic Analysis of Vehicle" class="mb-4 w-full rounded" />
+            <p>Simulated a 2D vehicle suspension to determine natural frequency using Python for System Dynamics. Included modeling of masses, springs, and dampers, and extraction of key performance data.</p>
+          </div>
+        </template>
+        <template x-if="modalProject === 'cuttingboards'">
+          <div>
+            <h2 class="text-xl font-bold mb-2">Cutting Boards</h2>
+            <img src="CuttingBoards3_2.png" alt="Cutting Boards" class="mb-4 w-full rounded" />
+            <p>Handcrafted cutting boards in multiple woods. Used end-grain construction for durability and food safety, finished with beeswax and mineral oil. Created both for gifting and personal use.</p>
+          </div>
+        </template>
+        <template x-if="modalProject === 'blackdesk'">
+          <div>
+            <h2 class="text-xl font-bold mb-2">Black Desk Build</h2>
+            <img src="BlackDesk0.jpg" alt="Black Desk Build" class="mb-4 w-full rounded" />
+            <p>Designed and built a custom black desk for a modern home office. The project involved woodworking, finishing, and cable management solutions for a clean workspace.</p>
+          </div>
+        </template>
+        <template x-if="modalProject === 'cuttingboardswip'">
+          <div>
+            <h2 class="text-xl font-bold mb-2">Cutting Boards (WIP)</h2>
+            <img src="CuttingBoards3WIP.png" alt="Cutting Boards WIP" class="mb-4 w-full rounded" />
+            <p>Ongoing work experimenting with geometric patterns, resin inlays, and new finishing techniques. This project is a creative outlet for testing new woodworking ideas.</p>
+          </div>
+        </template>
+        <template x-if="modalProject === 'slipknotsign'">
+          <div>
+            <h2 class="text-xl font-bold mb-2">Slipknot CNC Sign</h2>
+            <img src="SlipknotSign1.png" alt="Slipknot CNC Sign" class="mb-4 w-full rounded" />
+            <p>Designed in CAD and produced on a CNC router, this sign pays homage to the band Slipknot. The build involved finishing, painting, and wall mounting.</p>
+          </div>
+        </template>
+      </div>
+    </div>
 
     <!-- Extras -->
     <section id="extras" class="mt-16">
