@@ -155,6 +155,16 @@
             <p class="text-sm text-slate-600 mt-1">I performed FEA on a drone bracket I designed at the end of my sophomore year at UVM. </p>
           </div>
         </article>
+        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
+          @click="openModal('BlackHole')">
+          <div class="h-48 bg-gray-100">
+            <img src="BlackHole.png" alt="Black Hole" class="object-cover w-full h-full" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium">Black Hole Simulation</h3>
+            <p class="text-sm text-slate-600 mt-1">I am working on simulating gravitational lensing around a black hole in python for my final project for a Computational Physics course. </p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -247,6 +257,7 @@
             <h2 class="text-xl font-bold mb-2">ABAQUS Simulation of Compound Bow Shot</h2>
             <img src="CompoundBow.png" alt="Compound Bow Simulation" class="mb-4 w-full rounded" />
             <p>I am currently working on performing a dynamic simulation in ABAQUS of a compound bow shooting an arrow. The geometry is extremely complex, so I look forward to seeing how I can mesh the part to reduce the computational requirement without sacrificing simulation accuracy.</p>
+            <p> Note: the attached image is a CAD model from Paul Motley of Artec 3D Ambassador GoMeasure3D, I did not create the model shown.</p>
           </div>
         </template>
         <template x-if="modalProject === 'cuttingboards'">
@@ -291,6 +302,14 @@
             <h2 class="text-xl font-bold mb-2">Powerlifting</h2>
             <img src="PowerliftingPodium0.JPEG" alt="Powerlifting" class="mb-4 w-full rounded" />
             <p>I have multiple state and regional records in ASAPL and RPS powerlifting organizations. At my last competition I totalled 1,295.2 lbs, with a 463 lb squat, 281 lb benchpress, and 551 lb squat at 178 lbs body weight (402 DOTS).  </p>            
+          </div>
+        </template>
+        </template>
+        <template x-if="modalProject === 'BlackHole'">
+          <div>
+            <h2 class="text-xl font-bold mb-2">Black Hole Simulation</h2>
+            <img src="BlackHole.png" alt="Black Hole" class="mb-4 w-full rounded" />
+            <p>I am currently working on simulating gravitational lensing around a black hole in 3D in Python for my Computational Physics course. This will be very tricky, I will have to apply Einstein's field equations to govern light's behavior. The project will require ray tracing, which is very computationally intense. I would like to be able to run the simulation on my laptop, which doesn't have a graphics card, so this will be a challenge. The code will have to be efficient.  </p>            
           </div>
         </template>
 <!-- Blue Desk Video Modal -->
