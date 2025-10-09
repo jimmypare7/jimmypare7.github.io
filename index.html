@@ -254,8 +254,7 @@
             <h2 class="text-xl font-bold mb-2">Chaos Cutting Boards</h2>
             <img src="CuttingBoards3_2.png" alt="Chaos Cutting Boards" class="mb-4 w-full rounded" />
             <img src="CuttingBoard3_1.png" alt="Chaos Cutting Board" class="mb-4 w-full rounded" />
-            <p>To make these cutting boards, I used maple, walnut, and cherry. To create the chaotic pattern, I start off by making a normal, long grain cutting board but then repeatedly rip the board to different widths and re-glue. Almost like making a cutting board out of a cutting board out of a cutting board. After repeatedly ripping the boards with the wood grain and glueing, the final cut goes across the wood grain and allows the chaotic pattern to be revealed. To finish the boards, I soak in mineral oil, apply wood butter, and put feet on the boards. The feet are very cheap but I feel they make the board feel significantly higher quality. 
-</p>
+            <p>To make these cutting boards, I used maple, walnut, and cherry. To create the chaotic pattern, I start off by making a normal, long grain cutting board but then repeatedly rip the board to different widths and re-glue. Almost like making a cutting board out of a cutting board out of a cutting board. After repeatedly ripping the boards with the wood grain and glueing, the final cut goes across the wood grain and allows the chaotic pattern to be revealed. To finish the boards, I soak in mineral oil, apply wood butter, and put feet on the boards. The feet are very cheap but I feel they make the board feel significantly higher quality. </p>
             <p class="mt-2">End grain cutting boards are more desirable than more common long grain cutting boards because of their durability and almost 'self healing' properties. When an end grain cutting board is sliced by a knife, the gap can be closed over time as the wood naturally expands and contracts. This is because the wood expands primarily across the grain instead of with the grain.</p>
           </div>
         </template>
@@ -287,6 +286,23 @@
             <p>For my final project for ME 1510 - Computational Mechanical Engineering Lab, I performed a finite element analysis simulation on a bracket designed to attach to a drone. The vision was to design a drone bracket for an on campus food delivery solution. Instead of relying on cars and having to deal with wait time and traffic, deliver food via drones instead. The simulation in Solidworks confirmed the viability of this bracket. </p>            
           </div>
         </template>
+<!-- Blue Desk Video Modal -->
+<div
+  x-show="modalOpen && modalProject === 'bluedeskvideo'"
+  x-transition
+  class="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50"
+  style="display: none;"
+  @keydown.escape.window="closeModal()"
+>
+  <div class="bg-white p-6 rounded-lg shadow-lg max-w-2xl w-full relative" @click.away="closeModal()">
+    <button class="absolute top-2 right-2 text-2xl" @click="closeModal()">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Making the Blue Epoxy Desk</h2>
+    <video controls class="w-full rounded" poster="BlueDesk0.png">
+      <source src="BlueDeskVidCompressed.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>        
       </div>
     </div>
 
@@ -294,7 +310,7 @@
     <section id="extras" class="mt-16">
       <h2 class="text-2xl font-semibold mb-4">Extras</h2>
       <ul class="space-y-2">
-        <li><a href="#" class="underline">Video of making the blue desk</a></li>
+        <li><a href="#" class="font-medium underline" @click.prevent="openModal('bluedeskvideo')">Video of making the blue desk</a>
         <li><a href="#" class="underline">Powerlifting</a></li>
         <li><a href="#" class="underline">Speed cubing</a></li>
       </ul>
