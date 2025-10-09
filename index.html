@@ -160,13 +160,13 @@
         </article>
         <!-- Heat Transfer Simulation -->
         <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
-          @click="openModal('heattransfer')">
+          @click="openModal('DroneBracket')">
           <div class="h-48 bg-gray-100">
             <img src="UF-chip-pile.webp" alt="Wood Chip Pile" class="object-cover w-full h-full" />
           </div>
           <div class="p-4">
-            <h3 class="font-medium">Heat Transfer Simulation in Python</h3>
-            <p class="text-sm text-slate-600 mt-1">For my Heat Transfer final project, I simulated the heat transfer in a summer snow storage system. </p>
+            <h3 class="font-medium">Finite Element Analysis of Drone Bracket</h3>
+            <p class="text-sm text-slate-600 mt-1">I performed FEA on a drone bracket I designed at the end of my sophomore year at UVM. </p>
           </div>
         </article>
       </div>
@@ -294,15 +294,11 @@
             <p>I made this sign by using a CNC machine and two types of acrylic. There is a strip of LED lights around the outside of the clear acrylic which give a pretty neat light refraction effect. Originally, I was planning on engraving the ‘Slipknot’ logo instead of cutting it out but I found that the light did not refract how I wanted it to.</p>
           </div>
         </template>
-        <template x-if="modalProject === 'heattransfer'">
+        <template x-if="modalProject === 'DroneBracket'">
           <div>
             <h2 class="text-xl font-bold mb-2">Heat Transfer Simulation in Python</h2>
-            <img src="UF-chip-pile.webp" alt="Wood chip pile" class="mb-4 w-full rounded" />
-            <p> For my Heat Transfer final project, I simulated the heat flux entering and leaving a pile of snow insulated by different materials during the summer months. As climate change reduces ski season length in New England, ski resorts have explored storing snow over the summer to kickstart the next season. I worked with a team of engineering students to simulate how much of the snow would last the summer, different heat fluxes, and how different storage solutions would behave. The paper we wrote is attached below.</p>
-            <a href="ME_2240_Final_Report_Team_6_REVISED.pdf" target="_blank" class="inline-block mt-4 px-5 py-2 rounded bg-blue-700 text-white font-semibold hover:bg-blue-800 transition">
-              View Report (PDF)
-            </a>
-            
+            <img src="DroneBracket.png" alt="Drone Bracket" class="mb-4 w-full rounded" />
+            <p>For my final project for ME 1510 - Computational Mechanical Engineering Lab, I performed a finite element analysis simulation on a bracket designed to attach to a drone. The vision was to design a drone bracket for an on campus food delivery solution. Instead of relying on cars and having to deal with wait time and traffic, deliver food via drones instead. The simulation in Solidworks confirmed the viability of this bracket. </p>            
           </div>
         </template>
       </div>
