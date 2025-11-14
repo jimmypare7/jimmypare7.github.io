@@ -156,13 +156,13 @@
           </div>
         </article>
         <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
-          @click="openModal('BlackHole')">
+          @click="openModal('ParticleSimulation')">
           <div class="h-48 bg-gray-100">
-            <img src="BlackHole.png" alt="Black Hole" class="object-cover w-full h-full" />
+            <img src="ParticleSimulation1.webp" alt="Particle Simulation" class="object-cover w-full h-full" />
           </div>
           <div class="p-4">
-            <h3 class="font-medium">Black Hole Simulation (WIP)</h3>
-            <p class="text-sm text-slate-600 mt-1">I am working on simulating gravitational lensing around a black hole in Python for my final project for a Computational Physics course. </p>
+            <h3 class="font-medium">Compressible Flow Python Simulation (WIP)</h3>
+            <p class="text-sm text-slate-600 mt-1">I am working on simulating a compressible flow in a shock tube for my computational physics and compressible flow courses. </p>
           </div>
         </article>
       </div>
@@ -305,11 +305,11 @@
           </div>
         </template>
         </template>
-        <template x-if="modalProject === 'BlackHole'">
+        <template x-if="modalProject === 'ParticleSimulation'">
           <div>
-            <h2 class="text-xl font-bold mb-2">Black Hole Simulation (WIP)</h2>
-            <img src="BlackHole.png" alt="Black Hole" class="mb-4 w-full rounded" />
-            <p>I am currently working on simulating gravitational lensing around a black hole in 3D in Python for my Computational Physics course. This will be very tricky, I will have to apply Einstein's field equations to govern light's behavior. The project will require ray tracing, which is very computationally intense. I would like to be able to run the simulation on my laptop, which doesn't have a graphics card, so this will be a challenge. The code will have to be efficient.  </p>            
+            <h2 class="text-xl font-bold mb-2">Compressible Flow Python Simulation (WIP)</h2>
+            <img src="ParticleSimulation1" alt="ParticleSimulation" class="mb-4 w-full rounded" />
+            <p>I am currently working on simulating a compressible flow in a shock tube for my computational physics and compressible flow courses. I am using the Rusanov flux numerical method in python to describe the velocity, pressure, and density of the flow. This method is similar to the Euler numerical method for solving differential equations except for the use of a diffusive variable to stabilize the model.  </p>            
           </div>
         </template>
 <!-- Blue Desk Video Modal -->
