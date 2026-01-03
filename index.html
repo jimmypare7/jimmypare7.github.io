@@ -137,11 +137,11 @@
         <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
           @click="openModal('compoundbow')">
           <div class="h-48 bg-gray-100">
-            <img src="CompoundBowRemesh.png" alt="Recurve Bow - Adaptive Remeshing" class="object-cover w-full h-full" />
+            <img src="AdaptiveRemeshing0.png" alt="Recurve Bow - Adaptive Remeshing" class="object-cover w-full h-full" />
           </div>
           <div class="p-4">
-            <h3 class="font-medium">Recurve Bow Static Analysis (WIP)</h3>
-            <p class="text-sm text-slate-600 mt-1">Static loading analysis of a recurve bow with an adaptive remeshing workflow in ABAQUS to refine stress concentrations and improve solution accuracy.</p>
+            <h3 class="font-medium">Recurve Bow Adaptive Meshing FEA</h3>
+            <p class="text-sm text-slate-600 mt-1">Static analysis of a recurve bow in Abaqus using an adaptive remeshing process.</p>
           </div>
         </article>
         <!-- Drone Bracket Simulation -->
@@ -255,23 +255,12 @@
         <template x-if="modalProject === 'compoundbow'">
           <div>
             <h2 class="text-xl font-bold mb-2">Recurve Bow Static Analysis (WIP)</h2>
-            <img src="CompoundBowRemesh.png" alt="Recurve Bow - Adaptive Remeshing" class="mb-4 w-full rounded" />
-            <p>This project was updated from a dynamic compound-bow simulation to a static analysis of a recurve bow under loading. The current workflow uses ABAQUS to perform a static step with an adaptive remeshing loop: the mesh is refined in regions with high estimated discretization error (typically near stress concentrations), and the solve is repeated until convergence criteria are met. The result is a more accurate stress field and better-resolved geometry around critical features.</p>
-            <p class="mt-2">Shown: left is the initial coarse mesh, right is the refined mesh after adaptive remeshing. I am continuing to tune the remeshing parameters and boundary conditions to ensure convergence and physically meaningful results.</p>
-            <a href="CompoundBow_Report.pdf" target="_blank" class="inline-block mt-4 px-5 py-2 rounded bg-blue-700 text-white font-semibold hover:bg-blue-800 transition">
-              View Report (PDF)
-            </a>
+            <img src="AdaptiveRemeshing0.png" alt="Recurve Bow - Adaptive Remeshing" class="mb-4 w-full rounded" />
+            <p>For my Computational Solids course, I used the adaptive remeshing process in Abaqus for a static loading simulation on a recurve bow. The remeshing process refines the tetrahedral mesh in areas of high stress or strain gradients over a set number of increments. It is particularly useful for complex geometries where edge seeding and hex mesh patterns cannot be used. The image above shows the initial course mesh (left) that was refined to the mesh shown on the right.  </p>
+            <p class="mt-2">Adaptive remeshing is preferable over simply assigning a global element type because it uses fewer elements for the mesh to converge, saving computational cost while improving accuracy. </p>
           </div>
         </template>
-        <template x-if="modalProject === 'compoundbowvideo'">
-          <div>
-            <h2 class="text-xl font-bold mb-2">Recurve Bow - Adaptive Remeshing Demo</h2>
-            <video controls class="mb-4 w-full rounded" poster="CompoundBowRemesh.png">
-              <source src="CompoundBowRemeshDemo.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </template>
+
         <template x-if="modalProject === 'cuttingboards'">
           <div style="max-height:70vh; overflow-y:auto;">
             <h2 class="text-xl font-bold mb-2">Chaos Cutting Boards</h2>
