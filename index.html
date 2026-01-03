@@ -256,7 +256,7 @@
         
         <template x-if="modalProject === 'compoundbow'">
           <div>
-            <h2 class="text-xl font-bold mb-2">Recurve Bow Static Analysis (WIP)</h2>
+            <h2 class="text-xl font-bold mb-2">Recurve Bow Static Analysis</h2>
             <img src="AdaptiveRemeshing1.png" alt="Recurve Bow - Adaptive Remeshing" class="mb-4 w-full rounded" />
             <p>For my Computational Solids course, I used the adaptive remeshing process in Abaqus for a static loading simulation on a recurve bow. The remeshing process refines the tetrahedral mesh in areas of high stress or strain gradients over a set number of increments. It is particularly useful for complex geometries where edge seeding and hex mesh patterns cannot be used. The image above shows the initial course mesh (bottom) that was refined to the mesh shown on the top.  </p>
             <p class="mt-2">Adaptive remeshing is preferable over simply assigning a global element type because it uses fewer elements for the mesh to converge, saving computational cost while improving accuracy. </p>
@@ -310,7 +310,7 @@
         </template>
         <template x-if="modalProject === 'ParticleSimulation'">
           <div>
-            <h2 class="text-xl font-bold mb-2">Compressible Flow Python Simulation (WIP)</h2>
+            <h2 class="text-xl font-bold mb-2">Compressible Flow Python Simulation </h2>
             <img src="ParticleSimulation1" alt="ParticleSimulation" class="mb-4 w-full rounded" />
             <p>I am currently working on simulating a compressible flow in a shock tube for my computational physics and compressible flow courses. I am using the Rusanov flux numerical method in python to describe the velocity, pressure, and density of the flow. This method is similar to the Euler numerical method for solving differential equations except for the use of a diffusive variable to stabilize the model.  </p>            
           </div>
