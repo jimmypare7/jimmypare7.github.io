@@ -161,8 +161,8 @@
             <img src="ParticleSimulation1.webp" alt="Particle Simulation" class="object-cover w-full h-full" />
           </div>
           <div class="p-4">
-            <h3 class="font-medium">Compressible Flow Python Simulation (WIP)</h3>
-            <p class="text-sm text-slate-600 mt-1">I am working on simulating a compressible flow in a shock tube for my computational physics and compressible flow courses. </p>
+            <h3 class="font-medium">Compressible Flow Python Simulation</h3>
+            <p class="text-sm text-slate-600 mt-1">I used the Rusanov numerical method for a compressible flow simulation in Python. </p>
           </div>
         </article>
       </div>
@@ -238,20 +238,22 @@
           <div>
             <h2 class="text-xl font-bold mb-2">Mechatronics Car</h2>
             <img src="MechatronicsCar0.png" alt="Mechatronics Car" class="mb-4 w-full rounded" />
-            <p>Here is a robotic car I made for a Mechatronics course. It was made to compete in a competition to move plastic bottles into different bins throughout a course. What was particularly di[...]</p>
+            <p>Here is a robotic car I made for a Mechatronics course. It was made to compete in a competition to move plastic bottles into different bins throughout a course. What was particularly difficult about this competition was the course was not known ahead of time, there were several aspects that were unknown. In addition to this, the robot had to be completely autonomous, meaning it couldn’t simply be controlled by a remote control. To combat these challenges, my team utilized an ultrasonic sensor to give position data to the microcontroller, which was then processed to tell the robot how to move. </p>
           </div>
         </template>
+        
         <template x-if="modalProject === 'speedoflight'">
           <div>
             <h2 class="text-xl font-bold mb-2">Speed of Light Experiment</h2>
             <img src="light.webp" alt="Speed of Light Experiment" class="mb-4 w-full rounded" />
-            <p>For my Waves and Quanta course I was able to measure the speed of light with 1.9% error. I was able to do this by using a laser, prism, and a series of mirrors, one of which was attache[...]</p>
-            <p class="mt-2">I have completed many labs in my time at UVM but this may be the most memorable. I did not realize that it was even possible to measure the speed of light without extremely[...]</p>
+            <p>For my Waves and Quanta course I was able to measure the speed of light with 1.9% error. I was able to do this by using a laser, prism, and a series of mirrors, one of which was attached to a motor spinning at a known RPM. In short, the light would hit the spinning mirror and travel a set distance before returning. By the time the light returned, the motor had spun a very small amount, causing the light to return to a different position than when it first was emitted. By using the change in position, speed of the motor, and total distance travelled by the light, the speed of light was calculated with good precision. To learn more, take a look at the attached PDF.</p>
+            <p class="mt-2">I have completed many labs in my time at UVM but this may be the most memorable. I did not realize that it was even possible to measure the speed of light without extremely advanced equipment, so when I first started to see the light shift as the motor sped up was a great feeling.</p>
             <a href="PHYS2500_Lab_1___Speed_of_Light.pdf" target="_blank" class="inline-block mt-4 px-5 py-2 rounded bg-blue-700 text-white font-semibold hover:bg-blue-800 transition">
               View Full Lab Report (PDF)
             </a>
           </div>
         </template>
+        
         <template x-if="modalProject === 'compoundbow'">
           <div>
             <h2 class="text-xl font-bold mb-2">Recurve Bow Static Analysis (WIP)</h2>
@@ -266,52 +268,71 @@
             <h2 class="text-xl font-bold mb-2">Chaos Cutting Boards</h2>
             <img src="CuttingBoards3_2.png" alt="Chaos Cutting Boards" class="mb-4 w-full rounded" />
             <img src="CuttingBoard3_1.png" alt="Chaos Cutting Board" class="mb-4 w-full rounded" />
-            <p>To make these cutting boards, I used maple, walnut, and cherry. To create the chaotic pattern, I start off by making a normal, long grain cutting board but then repeatedly rip the board[...]</p>
-            <p class="mt-2">End grain cutting boards are more desirable than more common long grain cutting boards because of their durability and almost 'self healing' properties. When an end grain c[...]</p>
+            <p>To make these cutting boards, I used maple, walnut, and cherry. To create the chaotic pattern, I start off by making a normal, long grain cutting board but then repeatedly rip the board to different widths and re-glue. Almost like making a cutting board out of a cutting board out of a cutting board. After repeatedly ripping the boards with the wood grain and glueing, the final cut goes across the wood grain and allows the chaotic pattern to be revealed. To finish the boards, I soak in mineral oil, apply wood butter, and put feet on the boards. The feet are very cheap but I feel they make the board feel significantly higher quality. </p>
+            <p class="mt-2">End grain cutting boards are more desirable than more common long grain cutting boards because of their durability and almost 'self healing' properties. When an end grain cutting board is sliced by a knife, the gap can be closed over time as the wood naturally expands and contracts. This is because the wood expands primarily across the grain instead of with the grain.</p>
           </div>
         </template>
         <template x-if="modalProject === 'blackdesk'">
           <div>
             <h2 class="text-xl font-bold mb-2">Black Epoxy Desk</h2>
             <img src="BlackDesk0.jpg" alt="Black Epoxy Desk" class="mb-4 w-full rounded" />
-            <p>Before my Junior year at UVM, I created this desk to do school work on. The wood is butternut with an epoxy river down the middle of the slab. I used a black pigment in the epoxy instea[...]</p>
+            <p>Before my Junior year at UVM, I created this desk to do school work on. The wood is butternut with an epoxy river down the middle of the slab. I used a black pigment in the epoxy instead of a dye because it adds a level of sheen and depth to the mixture. Since this photo was taken, I have swapped the legs to a standing desk base, so I can sit or stand while doing my school work.</p>
           </div>
         </template>
         <template x-if="modalProject === 'bluedesk'">
           <div>
             <h2 class="text-xl font-bold mb-2">Blue Epoxy Desk</h2>
             <img src="BlueDesk0.png" alt="Blue Epoxy Desk" class="mb-4 w-full rounded" />
-            <p>This desk follows the black epoxy desk in the series of epoxy builds. This desk was made from ambrosia maple and epoxy with blue pigment. The finish I use on large slab builds is actual[...]</p>
+            <p>This desk follows the black epoxy desk in the series of epoxy builds. This desk was made from ambrosia maple and epoxy with blue pigment. The finish I use on large slab builds is actually a hardwood floor finish as it has good durability, looks great, and easy to apply with no fumes.</p>
           </div>
         </template>
         <template x-if="modalProject === 'slipknotsign'">
           <div>
             <h2 class="text-xl font-bold mb-2">Slipknot CNC Sign</h2>
             <img src="SlipknotSign1.png" alt="Slipknot CNC Sign" class="mb-4 w-full rounded" />
-            <p>I made this sign by using a CNC machine and two types of acrylic. There is a strip of LED lights around the outside of the clear acrylic which give a pretty neat light refraction effect[...]</p>
+            <p>I made this sign by using a CNC machine and two types of acrylic. There is a strip of LED lights around the outside of the clear acrylic which give a pretty neat light refraction effect. Originally, I was planning on engraving the ‘Slipknot’ logo instead of cutting it out but I found that the light did not refract how I wanted it to.</p>
           </div>
         </template>
         <template x-if="modalProject === 'DroneBracket'">
           <div>
             <h2 class="text-xl font-bold mb-2">Finite Element Analysis of Drone Bracket</h2>
             <img src="DroneBracket.png" alt="Drone Bracket" class="mb-4 w-full rounded" />
-            <p>For my final project for ME 1510 - Computational Mechanical Engineering Lab, I performed a finite element analysis simulation on a bracket designed to attach to a drone. The vision was [...]
+            <p>For my final project for ME 1510 - Computational Mechanical Engineering Lab, I performed a finite element analysis simulation on a bracket designed to attach to a drone. The vision was to design a drone bracket for an on campus food delivery solution. Instead of relying on cars and having to deal with wait time and traffic, deliver food via drones instead. The simulation in Solidworks confirmed the viability of this bracket. </p>            
           </div>
         </template>
         <template x-if="modalProject === 'powerlifting'">
           <div>
             <h2 class="text-xl font-bold mb-2">Powerlifting</h2>
             <img src="PowerliftingPodium0.JPEG" alt="Powerlifting" class="mb-4 w-full rounded" />
-            <p>I have multiple state and regional records in ASAPL and RPS powerlifting organizations. At my last competition I totalled 1,295.2 lbs, with a 463 lb squat, 281 lb benchpress, and 551 lb[...]</p>
+            <p>I have multiple state and regional records in ASAPL and RPS powerlifting organizations. At my last competition I totalled 1,295.2 lbs, with a 463 lb squat, 281 lb benchpress, and 551 lb squat at 178 lbs body weight (402 DOTS).  </p>            
           </div>
+        </template>
         </template>
         <template x-if="modalProject === 'ParticleSimulation'">
           <div>
             <h2 class="text-xl font-bold mb-2">Compressible Flow Python Simulation (WIP)</h2>
-            <img src="ParticleSimulation1.webp" alt="ParticleSimulation" class="mb-4 w-full rounded" />
-            <p>I am currently working on simulating a compressible flow in a shock tube for my computational physics and compressible flow courses. I am using the Rusanov flux numerical method in pyth[...]</p>
+            <img src="ParticleSimulation1" alt="ParticleSimulation" class="mb-4 w-full rounded" />
+            <p>I am currently working on simulating a compressible flow in a shock tube for my computational physics and compressible flow courses. I am using the Rusanov flux numerical method in python to describe the velocity, pressure, and density of the flow. This method is similar to the Euler numerical method for solving differential equations except for the use of a diffusive variable to stabilize the model.  </p>            
           </div>
         </template>
+<!-- Blue Desk Video Modal -->
+<div
+  x-show="modalOpen && modalProject === 'bluedeskvideo'"
+  x-transition
+  class="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50"
+  style="display: none;"
+  @keydown.escape.window="closeModal()"
+>
+  <div class="bg-white p-6 rounded-lg shadow-lg max-w-2xl w-full relative" @click.away="closeModal()">
+    <button class="absolute top-2 right-2 text-2xl" @click="closeModal()">&times;</button>
+    <h2 class="text-xl font-bold mb-4">Making the Blue Epoxy Desk</h2>
+    <video controls class="w-full rounded" poster="BlueDesk0.png">
+      <source src="BlueDeskVidCompressed.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+</div>        
       </div>
     </div>
 
