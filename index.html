@@ -156,9 +156,9 @@
           </div>
         </article>
         <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
-          @click="openModal('ParticleSimulation')">
+          @click="openModal('CompressibleFlowSimulation')">
           <div class="h-48 bg-gray-100">
-            <img src="ParticleSimulation1.webp" alt="Particle Simulation" class="object-cover w-full h-full" />
+            <img src="ParticleSimulation1.webp" alt="Compressible Flow Simulation" class="object-cover w-full h-full" />
           </div>
           <div class="p-4">
             <h3 class="font-medium">Compressible Flow Python Simulation</h3>
@@ -308,11 +308,12 @@
           </div>
         </template>
         </template>
-        <template x-if="modalProject === 'ParticleSimulation'">
+        <template x-if="modalProject === 'CompressibleFlowSimulation'">
           <div>
             <h2 class="text-xl font-bold mb-2">Compressible Flow Python Simulation </h2>
-            <img src="ParticleSimulation1" alt="ParticleSimulation" class="mb-4 w-full rounded" />
-            <p>I am currently working on simulating a compressible flow in a shock tube for my computational physics and compressible flow courses. I am using the Rusanov flux numerical method in python to describe the velocity, pressure, and density of the flow. This method is similar to the Euler numerical method for solving differential equations except for the use of a diffusive variable to stabilize the model.  </p>            
+            <img src="" alt="ParticleSimulation" class="mb-4 w-full rounded" />
+            <p>For my Computational Physics and Compressible Flow courses, I made a simulation of a shock tube in Python. A shock tube is a device commonly used in aerospace applications where a flow needs to be accelerated quickly without the prohibitive cost of a wind tunnel. The Python simulation works by discretizing the domain, calculating the flux of the state properties between cells, and then stepping forward in time using the governing equation.</p> 
+            <p> Further information about this simulation can be found in the following PDF. I learned a lot with this project and thoroughly enjoyed it. </p>
           </div>
         </template>
 <!-- Blue Desk Video Modal -->
