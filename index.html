@@ -184,6 +184,20 @@
             <p class="text-sm text-slate-600 mt-1">End grain boards made from maple, walnut, and cherry.</p>
           </div>
         </article>
+        
+        <!-- Edge Grain Cutting Boards -->
+        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
+          @click="openModal('EdgeBoard')">
+          <div class="h-48 bg-gray-100">
+            <img src="EdgeGrainBoard.jpg" alt="Edge Grain Cutting Board" class="object-cover w-full h-full" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium">Edge Grain Cutting Boards </h3>
+            <p class="text-sm text-slate-600 mt-1">Edge grain cutting boards made from black walnut and maple. Designed around ease of use.  </p>
+          </div>
+        </article>
+
+        
         <!-- Black Epoxy Desk -->
         <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
           @click="openModal('blackdesk')">
@@ -217,6 +231,7 @@
             <p class="text-sm text-slate-600 mt-1">A CNC cut Slipknot sign that uses light refraction to create an interesting effect.</p>
           </div>
         </article>
+        
       </div>
     </section>
 
@@ -325,6 +340,17 @@
             </a>
           </div>
         </template>
+
+        <template x-if="modalProject === 'EdgeBoard'">
+          <div style="max-height:70vh; overflow-y:auto;">
+            <h2 class="text-xl font-bold mb-2">Edge Grain Cutting Boards </h2>
+            <img src="EdgeGrainBoard.jpg" alt="Edge Grain Cutting Board Image" class="mb-4 w-full rounded" />
+            <p>Above is an image of one of the edge grain cutting boards in December of 2025. I usually make end grain boards but I chose to make a batch of edge grain this time because they don't have to be as thick as end grain, and therefore are easier to clean / handle. End grain board have to be thicker than edge grain to prevent warping. This batch of cutting boards was made of maple and black walnut, which I think pair well together. </p> 
+      
+            
+          </div>
+        </template>
+        
 <!-- Blue Desk Video Modal -->
 <div
   x-show="modalOpen && modalProject === 'bluedeskvideo'"
