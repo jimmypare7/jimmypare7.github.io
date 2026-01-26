@@ -410,7 +410,54 @@
         target="_blank"
         class="px-5 py-2 rounded bg-blue-700 text-white font-semibold hover:bg-blue-800 transition text-center"
       >
+        <template x-if="modalProject === 'primeengineering'">
+  <div style="max-height:70vh; overflow-y:auto;">
+    <h2 class="text-xl font-bold mb-2">Prime Engineering FEA Competition</h2>
+
+    <img
+      src="PE_photo.jpeg"
+      alt="Prime Engineering FEA Competition"
+      class="mb-4 w-full rounded"
+    />
+
+    <p class="mb-6">
+      I was named co-winner of the 2026 Prime Engineering regional finite element analysis competition. The competition consisted of performing FEA on a nuclear payload supporting structure to determine the maximum weight that a crane can carry. 
+    </p>
+    
+    <p class="mb-6">
+    The final submission consisted of a report summarizing the findings of FEA and hand calculations alongside a mechanical drawing of the structure, attached below. Further details about the competition can be found in the 'UVM College of Engineering and Mathematical Sciences Newsletter Post' link.
+    </p>
+
+    
+    <!-- Buttons / links container -->
+    <div class="flex flex-col gap-3">
+      <a
+        href="Prize_Competition_Report__Jimmy_Pare.pdf"
+        target="_blank"
+        class="px-5 py-2 rounded bg-blue-700 text-white font-semibold hover:bg-blue-800 transition text-center"
+      >
+        View Competition Report (PDF)
+      </a>
+
+      <a
+        href="Structure_Drawing_0.pdf"
+        target="_blank"
+        class="px-5 py-2 rounded bg-blue-700 text-white font-semibold hover:bg-blue-800 transition text-center"
+      >
+        View Mechanical Drawing of Supporting Structure
+      </a>
+
+      <a
+        href="https://www.uvm.edu/cems/news/uvm-students-share-top-honors-prime-engineering-prize-competition"
+        target="_blank"
+        class="px-5 py-2 rounded bg-blue-700 text-white font-semibold hover:bg-blue-800 transition text-center"
+      >
         UVM College of Engineering and Mathematical Sciences Newsletter Post
+      </a>
+    </div>
+  </div>
+</template>
+
       </a>
     </div>
   </div>
