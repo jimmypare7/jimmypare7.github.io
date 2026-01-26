@@ -231,18 +231,6 @@
             <p class="text-sm text-slate-600 mt-1">A CNC cut Slipknot sign that uses light refraction to create an interesting effect.</p>
           </div>
         </article>
-
-        <!-- Prime Engineering FEA Competition -->
-        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
-          @click="openModal('primeengineering')">
-          <div class="h-48 bg-gray-100">
-            <img src="PE_photo.png" alt="Prime Engineering FEA Competition" class="object-cover w-full h-full" />
-          </div>
-          <div class="p-4">
-            <h3 class="font-medium">Prime Engineering FEA Competition</h3>
-            <p class="text-sm text-slate-600 mt-1">Winner of the Prime Engineering FEA Competition for a student-designed finite element solution.</p>
-          </div>
-        </article>
         
       </div>
     </section>
@@ -265,7 +253,7 @@
           <div style="max-height:70vh; overflow-y:auto;">
             <h2 class="text-xl font-bold mb-2">Mechatronics Car</h2>
             <img src="MechatronicsCar0.png" alt="Mechatronics Car" class="mb-4 w-full rounded" />
-            <p>Here is a robotic car I made for a Mechatronics course. It was made to compete in a competition to move plastic bottles into different bins throughout a course. What was particularly di[...]
+            <p>Here is a robotic car I made for a Mechatronics course. It was made to compete in a competition to move plastic bottles into different bins throughout a course. What was particularly difficult about this competition was the course was not known ahead of time, there were several aspects that were unknown. In addition to this, the robot had to be completely autonomous, meaning it couldn’t simply be controlled by a remote controller. To combat these challenges, my team utilized an ultrasonic sensor to give position data to the microcontroller, which was then processed to tell the robot how to move. </p>
           </div>
         </template>
         
@@ -273,8 +261,8 @@
           <div style="max-height:70vh; overflow-y:auto;">
             <h2 class="text-xl font-bold mb-2">Speed of Light Experiment</h2>
             <img src="light.webp" alt="Speed of Light Experiment" class="mb-4 w-full rounded" />
-            <p>For my Waves and Quanta course I was able to measure the speed of light with 1.9% error. I was able to do this by using a laser, prism, and a series of mirrors, one of which was attache[...]
-            <p class="mt-2">I have completed many labs in my time at UVM but this may be the most memorable. I did not realize that it was even possible to measure the speed of light without extremely[...]
+            <p>For my Waves and Quanta course I was able to measure the speed of light with 1.9% error. I was able to do this by using a laser, prism, and a series of mirrors, one of which was attached to a motor spinning at a known RPM. In short, the light would hit the spinning mirror and travel a set distance before returning. By the time the light returned, the motor had spun a very small amount, causing the light to return to a different position than when it first was emitted. By using the change in position, speed of the motor, and total distance travelled by the light, the speed of light was calculated with good precision. To learn more, take a look at the attached PDF.</p>
+            <p class="mt-2">I have completed many labs in my time at UVM but this may be the most memorable. I did not realize that it was even possible to measure the speed of light without extremely advanced equipment, so when I first started to see the light shift as the motor sped up was a great feeling.</p>
             <a href="PHYS2500_Lab_1___Speed_of_Light.pdf" target="_blank" class="inline-block mt-4 px-5 py-2 rounded bg-blue-700 text-white font-semibold hover:bg-blue-800 transition">
               View Full Lab Report (PDF)
             </a>
@@ -285,8 +273,8 @@
           <div style="max-height:70vh; overflow-y:auto;">
             <h2 class="text-xl font-bold mb-2">Recurve Bow Adaptive Meshing FEA </h2>
             <img src="AdaptiveRemeshing1.png" alt="Recurve Bow - Adaptive Remeshing" class="mb-4 w-full rounded" />
-            <p>For my Computational Solids course, I used the adaptive remeshing process in Abaqus for a static loading simulation on a recurve bow. The remeshing process refines the tetrahedral mesh [...]
-            <p class="mt-2">Adaptive remeshing is preferable over simply assigning a global element type because it uses fewer elements for the mesh to converge, saving computational cost while improv[...]
+            <p>For my Computational Solids course, I used the adaptive remeshing process in Abaqus for a static loading simulation on a recurve bow. The remeshing process refines the tetrahedral mesh in areas of high stress or strain gradients over a set number of increments. It is particularly useful for complex geometries where edge seeding and hex mesh patterns cannot be used. The image above shows the initial course mesh (bottom) that was refined to the mesh shown on the top.  </p>
+            <p class="mt-2">Adaptive remeshing is preferable over simply assigning a global element type because it uses fewer elements for the mesh to converge, saving computational cost while improving accuracy. </p>
           </div>
         </template>
 
@@ -295,8 +283,8 @@
             <h2 class="text-xl font-bold mb-2">Chaos Cutting Boards</h2>
             <img src="CuttingBoards3_2.png" alt="Chaos Cutting Boards" class="mb-4 w-full rounded" />
             <img src="CuttingBoard3_1.png" alt="Chaos Cutting Board" class="mb-4 w-full rounded" />
-            <p>To make these cutting boards, I used maple, walnut, and cherry. To create the chaotic pattern, I start off by making a normal, long grain cutting board but then repeatedly rip the board[...]
-            <p class="mt-2">End grain cutting boards are more desirable than more common long grain cutting boards because of their durability and almost 'self healing' properties. When an end grain c[...]
+            <p>To make these cutting boards, I used maple, walnut, and cherry. To create the chaotic pattern, I start off by making a normal, long grain cutting board but then repeatedly rip the board to different widths and re-glue. Almost like making a cutting board out of a cutting board out of a cutting board. After repeatedly ripping the boards with the wood grain and glueing, the final cut goes across the wood grain and allows the chaotic pattern to be revealed. To finish the boards, I soak in mineral oil, apply wood butter, and put feet on the boards. The feet are very cheap but I feel they make the board feel significantly higher quality. </p>
+            <p class="mt-2">End grain cutting boards are more desirable than more common long grain cutting boards because of their durability and almost 'self healing' properties. When an end grain cutting board is sliced by a knife, the gap can be closed over time as the wood naturally expands and contracts. This is because the wood expands primarily across the grain instead of with the grain.</p>
           </div>
         </template>
         
@@ -304,7 +292,7 @@
           <div style="max-height:70vh; overflow-y:auto;">
             <h2 class="text-xl font-bold mb-2">Black Epoxy Desk</h2>
             <img src="BlackDesk0.jpg" alt="Black Epoxy Desk" class="mb-4 w-full rounded" />
-            <p>Before my Junior year at UVM, I created this desk to do school work on. The wood is butternut with an epoxy river down the middle of the slab. I used a black pigment in the epoxy instea[...]
+            <p>Before my Junior year at UVM, I created this desk to do school work on. The wood is butternut with an epoxy river down the middle of the slab. I used a black pigment in the epoxy instead of a dye because it adds a level of sheen and depth to the mixture. Since this photo was taken, I have swapped the legs to a standing desk base, so I can sit or stand while doing my school work.</p>
           </div>
         </template>
         
@@ -312,7 +300,7 @@
           <div style="max-height:70vh; overflow-y:auto;">
             <h2 class="text-xl font-bold mb-2">Blue Epoxy Desk</h2>
             <img src="BlueDesk0.png" alt="Blue Epoxy Desk" class="mb-4 w-full rounded" />
-            <p>This desk follows the black epoxy desk in the series of epoxy builds. This desk was made from ambrosia maple and epoxy with blue pigment. The finish I use on large slab builds is actual[...]
+            <p>This desk follows the black epoxy desk in the series of epoxy builds. This desk was made from ambrosia maple and epoxy with blue pigment. The finish I use on large slab builds is actually a hardwood floor finish as it has good durability, looks great, and easy to apply with no fumes.</p>
           </div>
         </template>
         
@@ -320,16 +308,7 @@
           <div style="max-height:70vh; overflow-y:auto;">
             <h2 class="text-xl font-bold mb-2">Slipknot CNC Sign</h2>
             <img src="SlipknotSign1.png" alt="Slipknot CNC Sign" class="mb-4 w-full rounded" />
-            <p>I made this sign by using a CNC machine and two types of acrylic. There is a strip of LED lights around the outside of the clear acrylic which give a pretty neat light refraction effect[...]
-          </div>
-        </template>
-
-        <template x-if="modalProject === 'primeengineering'">
-          <div style="max-height:70vh; overflow-y:auto;">
-            <h2 class="text-xl font-bold mb-2">Prime Engineering FEA Competition</h2>
-            <img src="PE_photo.png" alt="Prime Engineering FEA Competition" class="mb-4 w-full rounded" />
-            <p>I led a student team that entered and won the Prime Engineering FEA Competition. Our submission demonstrated a robust finite element approach to the posed design problem and included validation and clear documentation of assumptions and results.</p>
-            <p class="mt-2">This project was a great opportunity to apply practical FEA workflows, present results to industry reviewers, and strengthen my simulation and reporting skills.</p>
+            <p>I made this sign by using a CNC machine and two types of acrylic. There is a strip of LED lights around the outside of the clear acrylic which give a pretty neat light refraction effect. Originally, I was planning on engraving the ‘Slipknot’ logo instead of cutting it out but I found that the light did not refract how I wanted it to.</p>
           </div>
         </template>
         
@@ -337,7 +316,7 @@
           <div style="max-height:70vh; overflow-y:auto;">
             <h2 class="text-xl font-bold mb-2">Finite Element Analysis of Drone Bracket</h2>
             <img src="DroneBracket.png" alt="Drone Bracket" class="mb-4 w-full rounded" />
-            <p>For my final project for ME 1510 - Computational Mechanical Engineering Lab, I performed a finite element analysis simulation on a bracket designed to attach to a drone. The vision was [...]
+            <p>For my final project for ME 1510 - Computational Mechanical Engineering Lab, I performed a finite element analysis simulation on a bracket designed to attach to a drone. The vision was to design a drone bracket for an on campus food delivery solution. Instead of relying on cars and having to deal with wait time and traffic, deliver food via drones instead. The simulation in Solidworks confirmed the viability of this bracket. </p>            
           </div>
         </template>
         
@@ -345,7 +324,7 @@
           <div style="max-height:70vh; overflow-y:auto;">
             <h2 class="text-xl font-bold mb-2">Powerlifting</h2>
             <img src="PowerliftingPodium0.JPEG" alt="Powerlifting" class="mb-4 w-full rounded" />
-            <p>I have multiple state and regional records in ASAPL and RPS powerlifting organizations. At my last competition I totalled 1,295.2 lbs, with a 463 lb squat, 281 lb benchpress, and 551 lb[...]
+            <p>I have multiple state and regional records in ASAPL and RPS powerlifting organizations. At my last competition I totalled 1,295.2 lbs, with a 463 lb squat, 281 lb benchpress, and 551 lb squat at 178 lbs body weight (402 DOTS).  </p>            
           </div>
         </template>
         
@@ -353,7 +332,7 @@
           <div style="max-height:70vh; overflow-y:auto;">
             <h2 class="text-xl font-bold mb-2">Compressible Flow Python Simulation </h2>
             <img src="shock_tube_all_variables_4.gif" alt="Shock Tube GIF" class="mb-4 w-full rounded" />
-            <p>For my Computational Physics and Compressible Flow courses, I made a simulation of a shock tube in Python. A shock tube is a device commonly used in aerospace applications where a flow [...]
+            <p>For my Computational Physics and Compressible Flow courses, I made a simulation of a shock tube in Python. A shock tube is a device commonly used in aerospace applications where a flow needs to be accelerated quickly without the prohibitive cost of a wind tunnel. The Python simulation works by discretizing the domain, calculating the flux of the state properties between cells, and then stepping forward in time using the governing equation. The density, velocity, and pressure of the flow as a function of time are shown in the above GIF.</p> 
       
             <p> Further information about this simulation can be found in the following PDF. I learned a lot with this project and thoroughly enjoyed it. </p>
             <a href="Jimmy_Pare___PHYS_3150_Final_Report (1).pdf" target="_blank" class="inline-block mt-4 px-5 py-2 rounded bg-blue-700 text-white font-semibold hover:bg-blue-800 transition">
@@ -366,9 +345,9 @@
           <div style="max-height:70vh; overflow-y:auto;">
             <h2 class="text-xl font-bold mb-2">Edge Grain Cutting Boards </h2>
             <img src="EdgeGrainBoard.jpg" alt="Edge Grain Cutting Board Image" class="mb-4 w-full rounded" />
-            <p>Above is an image of one of the edge grain cutting boards I made in December of 2025. I usually make end grain boards but I chose to make a batch of edge grain this time because they do[...]
+            <p>Above is an image of one of the edge grain cutting boards I made in December of 2025. I usually make end grain boards but I chose to make a batch of edge grain this time because they don't have to be as thick as end grain, and therefore are easier to clean / handle. End grain board have to be thicker than edge grain to prevent warping. This batch of cutting boards was made of maple and black walnut, which I think pair well together. </p> 
 
-            <p>Although not very visible in the photo, I included a heavy chamfer and feet on the bottom of the boards. This makes it easy to pick up the boards and looks very aesthetically pleasing. [...]
+            <p>Although not very visible in the photo, I included a heavy chamfer and feet on the bottom of the boards. This makes it easy to pick up the boards and looks very aesthetically pleasing. I plan on continuing to keep this feature on future boards. </p>
       
             
           </div>
@@ -401,7 +380,6 @@
       <ul class="space-y-2">
         <li><a href="#" class="font-medium underline" @click.prevent="openModal('bluedeskvideo')">Blue epoxy desk video</a>
         <li><a href="#" class="font-medium underline" @click.prevent="openModal('powerlifting')">Powerlifting</a>
-        <li><a href="ABAQUS_FEA_Essentials_ME3990A_Computational_Solids_Engr_Pare.pdf" target="_blank" class="font-medium underline">ABAQUS_FEA_Essentials_ME3990A_Computational_Solids_Engr_Pare.pdf</a></li>
       </ul>
     </section>
 
