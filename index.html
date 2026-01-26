@@ -341,6 +341,16 @@
             <p>I have multiple state and regional records in ASAPL and RPS powerlifting organizations. At my last competition I totalled 1,295.2 lbs, with a 463 lb squat, 281 lb benchpress, and 551 lb squat at 178 lbs body weight (402 DOTS).  </p>            
           </div>
         </template>
+
+        <template x-if="modalProject === 'AbaqusCert'">
+          <div style="max-height:70vh; overflow-y:auto;">
+            <h2 class="text-xl font-bold mb-2">Abaqus Certification</h2>
+            <img src="ABAQUS_FEA_Essentials_ME3990A_Computational_Solids_Engr_Pare.pdf" alt="Powerlifting" class="mb-4 w-full rounded" />
+            <p>I have multiple state and regional records in ASAPL and RPS powerlifting organizations. At my last competition I totalled 1,295.2 lbs, with a 463 lb squat, 281 lb benchpress, and 551 lb squat at 178 lbs body weight (402 DOTS).  </p>            
+          </div>
+        </template>
+
+        
         
         <template x-if="modalProject === 'CompressibleFlowSimulation'">
           <div style="max-height:70vh; overflow-y:auto;">
@@ -443,6 +453,7 @@
     <section id="extras" class="mt-16">
       <h2 class="text-2xl font-semibold mb-4">Extras</h2>
       <ul class="space-y-2">
+        <li><a href="#" class="font-medium underline" @click.prevent="openModal('AbaqusCert')">Abaqus Cerification</a>a>
         <li><a href="#" class="font-medium underline" @click.prevent="openModal('bluedeskvideo')">Blue epoxy desk video</a>
         <li><a href="#" class="font-medium underline" @click.prevent="openModal('powerlifting')">Powerlifting</a>
       </ul>
