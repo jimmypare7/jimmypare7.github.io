@@ -173,7 +173,21 @@
       <h2 class="text-2xl font-semibold mb-4">Personal Projects</h2>
       <p class="text-slate-600 mb-6">The following are some projects I've taken on in my own time.</p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+        <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
+          @click="openModal('primeengineering')">
+          <div class="h-48 bg-gray-100">
+            <img src="PE_photo." alt="Prime Engineering Photo" class="object-cover w-full h-full" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium">Prime Engineering FEA Competition </h3>
+            <p class="text-sm text-slate-600 mt-1">I was named co-winner of the 2026 Prime Engineering Finite Element Analysis competition.</p>
+          </div>
+        </article>
+        
         <!-- Chaos Cutting Boards -->
+        
         <article class="border rounded-lg overflow-hidden hover:shadow-lg transition cursor-pointer"
           @click="openModal('cuttingboards')">
           <div class="h-48 bg-gray-100">
@@ -351,6 +365,13 @@
       
             
           </div>
+        </template>
+
+        <template x-if="modalProject === 'primeengineering'">
+          <div style="max-height:70vh; overflow-y:auto;">
+            <h2 class="text-xl font-bold mb-2">Prime Engineering FEA Competition</h2>
+            <img src="PE_photo.png" alt="Prime Engineering FEA Competition" class="mb-4 w-full rounded" />
+            <p>I was named co-winner of the 2026 Prime Engineering regional finite element analysis competition. The competition consisted of performing FEA on a nuclear payload supporting structure to determine the maximum weight that a crane can carry. The final submission consisted of a report summarizing the findings of FEA and hand calculations alongside a mechanical drawing of the structure, attached below. Further details about the competition can be found in the following link. </p>
         </template>
         
 <!-- Blue Desk Video Modal -->
